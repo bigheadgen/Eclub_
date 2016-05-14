@@ -18,7 +18,7 @@
 
 1) Clonando o repositório 
 
--Acesse o link do nosso repositório no Github https://github.com/bigheadgen/Eclub.git;
+-Acesse o link do nosso repositório no Github https://github.com/bigheadgen/Eclub_.git;
 -Baixe a versão mais recente do Git e instale na sua máquina;
 -crie uma pasta no seu disco C com nome Eclub;
 -Após criar a pasta com nome Eclub, clique com botão direito nela e Git Bash;
