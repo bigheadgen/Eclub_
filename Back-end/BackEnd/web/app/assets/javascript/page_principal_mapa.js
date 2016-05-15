@@ -1,16 +1,25 @@
-var map;
-					
-	function initMap() {
-  		var options ={
-		 zoom: 7,
-    	 center: {lat: -8.36914281798175, lng: -35.2798211914062},
-   		 mapTypeControl: false
-		}
-		map = new google.maps.Map(document.getElementById('map'), options);
-	}
-initMap(); 
+function myDivulgadores (){
 
-	function buttonLeg(){
-		var msg ='1 - ROCK  2 - FORRO\n 3 - REGGAE  4 - BALADAS'
-		alert(msg);
-	}
+	window.location = 'page_login_divulgador.html';
+
+}
+function myPesquisar(){
+    var valor_busca;
+	var valor_busca = document.getElementById("busca").value;
+
+	if(valor_busca == "recife" ||valor_busca == "jaboatao" || 
+	valor_busca == "olinda"|| valor_busca == "caruaru" || valor_busca == "petrolina" ||
+	 valor_busca == "cabo" || valor_busca == "camaragibe" || valor_busca == "garanhuns" || 
+	 valor_busca == "vitoria"){
+
+window.location = 'page_principal_mapa.html';
+}
+else{
+if (valor_busca == "" || valor_busca == null){
+   	window.alert("Ops, digite uma cidade!");
+}
+else{
+ window.alert("Ops, essa cidade não existe!");
+}
+}
+}

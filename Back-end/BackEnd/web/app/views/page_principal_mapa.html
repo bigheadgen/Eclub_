@@ -8,12 +8,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../assets/css/page_principal_mapa.css">
-	<script type="text/javascript" src="../assets/javascript/page_principal_mapa.js" ></script>
+	<script type="text/javascript" src="../assets/javascript/page_principal_mapa.js"></script>
+	<script type="text/javascript" src="../assets/javascript/mapa.js"></script>
 </head>
 	<body>
 	<header>
 		<div>
-		<input type="button" value="Divulgadores" id="divulgadores">
+		<input type="button" onclick="myDivulgadores();" value="Divulgadores" id="divulgadores">
 		</div>
 		</header>
 		<section id="grid_1">
@@ -25,13 +26,13 @@
 			</hgroup>
 				<div id="busca_div">
 				<input type="search" name="busca"  placeholder="Buscar uma Cidade" autocomplete="on" id="busca">
-				<input type="image" onclick="validar()" src="../assets/images/busca.png" id="buscaimage"/>				
+				<input type="image" onclick="myPesquisar()" src="../assets/images/busca.png" id="buscaimage"/>				
 				</div>
 				<section id="map"></section>
 				<script async defer
       				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ2unp3pWWtaTLrQrGmozyoTQT82GHM8c&callback=initMap">
     			</script>
-				<nav><!---Aqui vai ter os links das cidades mas badaladas--></nav>
+    			</section>
 		</section>
 </body>
 </html>		
