@@ -20,24 +20,24 @@ public class EventoDAO {
         //adicionar o retorno correto 
         return null;
     }   
-    public int buscarEvento(String nome) throws SQLException{
+    public int buscarEvento(Evento evento) throws SQLException{
         int id = -1;
         List <Evento> eventos = new ArrayList ();
         //query que busca o evento no banco
        con = new ConnectionFactory().getConnection();
        PreparedStatement stmt = con.prepareStatement("SELECT FROM Evento WHERE nome = ?"); 
-       stmt.setString(1, nome);
+       stmt.setString(1, evento.getNomeEvento());
        ResultSet rs = stmt.executeQuery();
        while (rs.next()){
-           
+           //implementar while para término do método
        }
        con.close();
        return id;
     }
         
-    public void removerEvento(String nome) throws SQLException{
+    public void removerEvento(Evento evento) throws SQLException{
     
-       int id = buscarEvento(nome);
+       int id = buscarEvento(evento);
     //query que deleta o evento do banco
        
     
