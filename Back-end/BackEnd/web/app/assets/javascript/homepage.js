@@ -19,10 +19,12 @@ function myPesquisar(){
 		}
 	}
 	if(valor_busca == "" || valor_busca == null){
-
-   		window.alert("Ops, digite uma cidade!");	
+		
+   		window.alert("Ops, digite uma cidade!");
+   			
 	}
 	else{
-	window.alert("Ops, essa cidade não existe!");
+	
+		window.alert("Ops, essa cidade não existe!");
 	}
 }
