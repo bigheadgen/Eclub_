@@ -27,11 +27,11 @@ public class Evento {
     //adicionar o atributo da foto
     
     
-    //Construtor é obrigatorio um divulgador e um endereco
-    public Evento(Divulgador divulgador, Endereco endereco){
-        this.divulgador = divulgador;
-        this.endereco = endereco;
-    }
+//    //Construtor é obrigatorio um divulgador e um endereco
+//    public Evento(Divulgador divulgador, Endereco endereco){
+//        this.divulgador = divulgador;
+//        this.endereco = endereco;
+//    }
 
     
     //gets e sets
