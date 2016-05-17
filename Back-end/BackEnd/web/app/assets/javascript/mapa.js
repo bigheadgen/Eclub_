@@ -44,7 +44,6 @@ function initMap() {
 
    	 });
 		  marker.addListener('click', toggleBounce);
+}
 
-	}
-initMap();
 
