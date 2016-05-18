@@ -13,22 +13,24 @@ var emailsValidos = ["hotmal.com" , "outlook.com", "gmail.com"];
 	function validarEmail(){
 
 		var email = document.getElementById("box").value.toLowerCase();
-		var letra = email.indexOf("@");
+		 var usuario;
+		 var dominio;
+		 usuario = email.substring(0, email.indexOf("@"));
+		 dominio = email.substring(email.indexOf("@")+ 1, email.length);
+		
+		if ((usuario.length >=1) && (dominio.length >=3) && (usuario.search("@")==-1) && (dominio.search("@")==-1) &&
+    	    (usuario.search(" ")==-1) && (dominio.search(" ")==-1) && (dominio.search(".")!=-1) &&   
+    	    (dominio.indexOf(".") >=1)&& (dominio.lastIndexOf(".") < dominio.length - 1)) {
 
-		for (var i = 0; i < emailsValidos.length; i++) {
-		 
-			if(email == emailsValidos[i]){
-				return true;
+				alert("E-mail valido");
 			}
-		}
-		return false;
+
+	else{ 
+	alert("E-mail invalido");
 	}
+
+}
 
 	function logarDivulgador(){
 		
-		if(validarEmail){
-
-			alert("email valido");
-		}
-
 	}
