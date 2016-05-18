@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class EventoDAO {
 
-    public Connection conLocal;
+    private Connection conLocal;
 
     public EventoDAO() {
         ConnectionFactory con = new ConnectionFactory();
@@ -24,7 +24,7 @@ public class EventoDAO {
     public void inserirEvento(Evento evento) {
         Evento e = new Evento();
         e = evento;
-        String sql = "";
-
+        String sql = "ISERT INTO Evento VALUES ('?', '?', '?', '?', '?', '?', '?', '?', '?')";
+        //terminar execução do código SQL
     }
 }
