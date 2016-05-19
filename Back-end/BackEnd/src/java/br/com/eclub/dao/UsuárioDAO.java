@@ -10,11 +10,19 @@ import java.util.Date;
  * @author Thierry Freire
  */
 public class UsuárioDAO {
-    private Connection con;
+    
+    private Connection conLocal;
+    
+    public UsuárioDAO(){
+       ConnectionFactory con = new ConnectionFactory ();
+       conLocal = con.getConnection();
+        
+    }
     //Método de buscar usuário
     public Usuario BuscarUsuario (String RedeSocial) throws SQLException{
         Usuario aux = new Usuario();
         //Query no banco fazendo solicitação de busca da variável
+<<<<<<< HEAD
          con = new ConnectionFactory().getConnection();
          String s = "SELECT RedeSocial FROM Usuario WHERE RedeSocial = ?;";
          PreparedStatement stmt;
@@ -36,11 +44,18 @@ public class UsuárioDAO {
          con.close();
          
          return aux; // falta implementar a busca
+=======
+         PreparedStatement stmt = conLocal.prepareStatement("SELECT FROM Usuario WHERE RedeSocial = ?");
+         stmt.setString(1, RedeSocial);
+         conLocal.close();
+         return null; // falta implementar a busca
+>>>>>>> 621f06e054dca3b50ca3f0ddf3bca9d5b7f83500
     }
     //Método de remover usuário
     public void RemoverUsuario (Usuario aux) throws SQLException{
         Usuario user = BuscarUsuario(aux.getRedeSocial());
         //Query de validar se o usuário exise para remoção;
+<<<<<<< HEAD
         if (user.getRedeSocial()!= null){
            String sql = ("DELETE FROM Usuario WHERE RedeSocial = ?;");
            
@@ -52,6 +67,14 @@ public class UsuárioDAO {
          con.close();
         }
       
+=======
+        if (usuario != null){
+            PreparedStatement stmt = conLocal.prepareStatement("DELETE FROM Usuario WHERE RedeSocial = ?");
+            stmt.setString(1, RedeSocial);
+            stmt.executeQuery();
+        }
+        conLocal.close();
+>>>>>>> 621f06e054dca3b50ca3f0ddf3bca9d5b7f83500
     }
     //Método de Cadastrar usuário
     public Usuario CadastrarUsuario (Usuario usuario) throws SQLException{
@@ -59,13 +82,11 @@ public class UsuárioDAO {
         validacao = BuscarUsuario(usuario.getRedeSocial());
         Date data = new Date();
         //Query de cadastrar usuário
-        con = new ConnectionFactory().getConnection();
         if (validacao == null){
-           PreparedStatement stmt = con.prepareStatement("INSERT INTO USUARIO ('dataNascimento', "
-           + "'redeSocial', 'sexo', 'nome_User', 'telefone_User', 'foto_User', 'email_User') "
-           + "Values ('?', '?', '?', '?', '?', '?', '?')");
+           PreparedStatement stmt = conLocal.prepareStatement("INSERT INTO USUARIO "
+                   + "Values ('?', '?', '?', '?', '?', '?', '?')");
            //Terminar o set do query e executá-los
-           con.close();
+           conLocal.close();
         }
         return usuario;
     }
