@@ -34,12 +34,12 @@ public class UsuárioDAO {
          
          while(rs.next()) {
          aux.setRedeSocial(rs.getString("redeSocial"));
-         aux.setDataNascimento(rs.getTime("dataNascimento"));
+         aux.setDataNascimento(rs.getDate("dataNascimento"));
          aux.setSexo(rs.getBoolean("sexo"));
          aux.setNomeUser(rs.getString("nome_User"));
          aux.setTelefoneUser(rs.getString("telefone_User"));
-         aux.setEmailUser(rs.getString("email_User"));         }
-         
+         aux.setEmailUser(rs.getString("email_User"));         
+         }         
          rs.close();
          stmt.close();
          conLocal.close();
@@ -66,18 +66,30 @@ public class UsuárioDAO {
       
     }
     //Método de Cadastrar usuário
-    public Usuario CadastrarUsuario (Usuario usuario) throws SQLException{
+    public Usuario CadastrarUsuario (Usuario aux) throws SQLException{
         Usuario validacao = new Usuario();
-        validacao = BuscarUsuario(usuario.getRedeSocial());
+        validacao = BuscarUsuario(aux.getRedeSocial());
         Date data = new Date();
         //Query de cadastrar usuário
         if (validacao == null){
            PreparedStatement stmt = conLocal.prepareStatement("INSERT INTO USUARIO "
                    + "Values ('?', '?', '?', '?', '?', '?', '?')");
-           //Terminar o set do query e executá-los
+           ResultSet rs = stmt.executeQuery();
+           while(rs.next()) {
+                aux.setRedeSocial(rs.getString("redeSocial"));
+                aux.setDataNascimento(rs.getDate("dataNascimento"));
+                aux.setSexo(rs.getBoolean("sexo"));
+                aux.setNomeUser(rs.getString("nome_User"));
+                aux.setTelefoneUser(rs.getString("telefone_User"));
+                aux.setEmailUser(rs.getString("email_User"));         
+         }         
            conLocal.close();
+           return aux;
+        } else{
+            return null;
+            
         }
-        return usuario;
+        
     }
   
 }
