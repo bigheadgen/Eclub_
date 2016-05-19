@@ -32,9 +32,8 @@ function toggleBounce() {
 }
 // AQUI A CAIXA DE INFORMAÇÕES DO PONTO E CRIADA
 function contentString(map , marker){
-    var contentString = '<div id="boxIW">'+
+    var contentString = '<p>teste de informações</p>';
 
-    '</div>';
     
     var infowindow = new google.maps.InfoWindow({
     content: contentString,
