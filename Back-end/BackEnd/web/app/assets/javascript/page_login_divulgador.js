@@ -12,7 +12,7 @@ var emailsValidos = ["hotmal.com" , "outlook.com", "gmail.com"];
 
 	function validarEmail(){
 
-		var email = document.getElementById("box").value.toLowerCase();
+		var email = document.getElementById("boxEmail").value.toLowerCase();
 		 var usuario;
 		 var dominio;
 		 usuario = email.substring(0, email.indexOf("@"));
@@ -31,6 +31,7 @@ var emailsValidos = ["hotmal.com" , "outlook.com", "gmail.com"];
 
 }
 
-	function logarDivulgador(){
+function validarSenha(){
 		
-	}
+
+}
