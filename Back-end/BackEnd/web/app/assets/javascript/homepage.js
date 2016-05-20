@@ -1,5 +1,5 @@
-var cidades = ["recife", "olinda", 
-"jaboatao", "caruaru", "petrolina","cabo", "camaragibe", 
+
+var cidades = ["recife", "olinda", "jaboatao", "caruaru", "petrolina","cabo", "camaragibe", 
 "garanhuns", "vitoria"];
 
 function myDivulgadores (){
@@ -20,7 +20,6 @@ function validarCidades(valor_busca){
 	return false;
 
 }
-
 function myPesquisar(){
 
 	var valor_busca = document.getElementById("busca").value.toLowerCase();

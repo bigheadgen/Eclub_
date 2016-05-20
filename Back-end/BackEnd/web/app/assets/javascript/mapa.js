@@ -19,25 +19,15 @@ var pino4 = {
   long:-35.15552044
 };
 
-var locais1 = [pino1, pino2, pino3, pino4];
-//FUNÇÃO QUE FAZ O MARCADOR CAIR NO MAPA
-function toggleBounce() {
- 	
- 	if (marker.getAnimation() !== null){
-   		 marker.setAnimation(null);
-   	}
-   	else {
-    	marker.setAnimation(google.maps.Animation.BOUNCE);
-  	}
-}
+var locais1 = [pino1, pino2, pino3];
+
 // AQUI A CAIXA DE INFORMAÇÕES DO PONTO E CRIADA
 function contentString(map , marker){
-    var contentString = '<p>teste de informações</p>';
+    var contentString = "Aqui vai as informações sobre o evento";
 
     
     var infowindow = new google.maps.InfoWindow({
     content: contentString,
-    size: new google.maps.Size(50, 50)
     });
       
       marker.addListener('click', function(){
@@ -54,13 +44,14 @@ function addMarker(map, locais){
     var marker = new google.maps.Marker({
       position: new google.maps.LatLng(locais[i].lat, locais[i].long),
       map: map,
-      title: locais[i].name 
+      title: locais[i].name,
+      animation: google.maps.Animation.DROP
     });
       
       contentString(map , marker);
       bounds.extend(new google.maps.LatLng(locais[i].lat, locais[i].long));
   }
-
+     
      map.fitBounds(bounds);
 }
 function initMap() {
