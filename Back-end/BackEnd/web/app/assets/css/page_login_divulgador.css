@@ -112,3 +112,12 @@ h1,h2,h3,p{
 	text-align: center;
 }
 
+footer{
+			width: 100%;
+			height: auto;
+			min-height: 2%;
+			margin-top: 1%;
+		}
+cite{
+margin-left: 46%;
+}
