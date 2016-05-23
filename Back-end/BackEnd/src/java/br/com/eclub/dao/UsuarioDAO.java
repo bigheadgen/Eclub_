@@ -10,14 +10,12 @@ import java.util.Date;
  *
  * @author Thierry Freire
  */
-public class UsuárioDAO {
+public class UsuarioDAO {
     
     private Connection conLocal;
     
-    public UsuárioDAO(){
-       ConnectionFactory con = new ConnectionFactory ();
-       conLocal = con.getConnection();
-        
+    public UsuarioDAO(){
+      
     }
     //Método de buscar usuário
     public Usuario BuscarUsuario (String RedeSocial) throws SQLException{
@@ -72,6 +70,7 @@ public class UsuárioDAO {
         Date data = new Date();
         //Query de cadastrar usuário
         if (validacao == null){
+           conLocal = new ConnectionFactory().getConnection();
            PreparedStatement stmt = conLocal.prepareStatement("INSERT INTO USUARIO "
                    + "Values ('?', '?', '?', '?', '?', '?', '?')");
            ResultSet rs = stmt.executeQuery();
@@ -90,6 +89,29 @@ public class UsuárioDAO {
             
         }
         
+    }
+    //Método para alterar dados do usuário
+    public Usuario AlterarUsuario (Usuario aux) throws SQLException{
+        if (BuscarUsuario(aux.getRedeSocial())!= null){
+           conLocal = new ConnectionFactory().getConnection();
+           PreparedStatement stmt = conLocal.prepareStatement("UPDATE USUARIO "
+                   + "SET dataNascimento =?, redeSocial = ?, sexo = ?, nome_User = ?, telefone_User = ?,"
+                   + " email_User");
+           ResultSet rs = stmt.executeQuery();
+           while(rs.next()) {
+                aux.setRedeSocial(rs.getString("redeSocial"));
+                aux.setDataNascimento(rs.getDate("dataNascimento"));
+                aux.setSexo(rs.getBoolean("sexo"));
+                aux.setNomeUser(rs.getString("nome_User"));
+                aux.setTelefoneUser(rs.getString("telefone_User"));
+                aux.setEmailUser(rs.getString("email_User"));
+           }
+           conLocal.close();
+           return aux; 
+        } else {
+           return null;
+        }
+            
     }
   
 }

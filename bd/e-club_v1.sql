@@ -1,7 +1,6 @@
 drop DATABASE eclub;
 
-CREATE OR REPLACE DATABASE eclub 
-USE eclub;
+CREATE DATABASE eclub USE eclub; 
 
 CREATE OR REPLACE TABLE empresa_divulgador (
   nome_Emp varchar(70) NOT NULL DEFAULT '',
