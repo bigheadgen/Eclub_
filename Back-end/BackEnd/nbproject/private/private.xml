@@ -3,7 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Thierry%20Freire/Documents/Thierry/FG/Projeto%205NA/Eclub_/Back-end/BackEnd/src/java/br/com/eclub/dao/UsuarioDAO.java</file>
+=======
+            <file>file:/C:/Users/Thierry/Documents/Meus%20Documentos/Thierry/FG/Projeto%205NA/Eclub_/Back-end/BackEnd/src/java/br/com/eclub/dao/UsuarioDAO.java</file>
+>>>>>>> fbd358a2f22be4889fe4e95b5dfc968afd50c7fe
         </group>
     </open-files>
 </project-private>

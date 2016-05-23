@@ -14,7 +14,7 @@
 	<body>
 	<header>
 		<div>
-		<input type="button" onclick="myDivulgadores();" value="Divulgadores" id="divulgadores">
+		<input type="button" onclick="myLogin();" value="Faça seu login" id="login">
 		</div>
 		</header>
 		<section id="grid_1">
@@ -25,7 +25,7 @@
 				</a>
 			</hgroup>
 				<div id="busca_div">
-				<input type="search" name="busca"  placeholder="Buscar uma Cidade" autocomplete="on" id="busca">
+				<input type="search" name="busca"  placeholder="Buscar uma Cidade" autocomplete="on" autofocus="" size="20" maxlength="20" id="busca">
 				<input type="image" onclick="myPesquisar()" src="../assets/images/busca.png" id="buscaimage"/>				
 				</div>
 				<section id="map"></section>
@@ -33,6 +33,10 @@
       				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ2unp3pWWtaTLrQrGmozyoTQT82GHM8c&callback=initMap">
     			</script>
     			</section>
-		</section>
+    			<hr>
+		<footer>
+				<small>
+				<cite>Eclub &copy 2016 </cite></small>
+			</footer>
 </body>
 </html>		

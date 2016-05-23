@@ -3,9 +3,9 @@ var cidades = ["recife", "olinda",
 "garanhuns", "vitoria"];
 
 
-function myDivulgadores (){
+function myLogin(){
 
-	window.location = 'page_login_divulgador.html';
+	window.location = 'homepage.html';
 
 }
 function validarCidades(valor_busca){

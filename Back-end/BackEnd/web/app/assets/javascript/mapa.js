@@ -1,22 +1,17 @@
 var pino1 = {
-	name: "Marco Zero",
-	lat: -8.063167002249708, 
-	long:-34.871083450000015
+	name: "Recife",
+	lat: -8.0581882, 
+	long:-34.88242
 };
 var pino2 = { 
-	name: "FG", 
-	lat: -8.162551662756185,
-	long:-34.91668672513958
+	name: "Jaboatao", 
+	lat: -8.1693708,
+	long:-35.0025508
 };
-var pino3 = { 
-  name: "Paiva", 
-  lat: -8.26005792,
-  long:-34.94514942
-};
-var pino4 = { 
-  name: "Ponta Negra ", 
-  lat: -5.89562116,
-  long:-35.15552044
+var pino3 ={
+name: "Olinda", 
+  lat: -7.9934558,
+  long:-34.8497768
 };
 
 var locais1 = [pino1, pino2, pino3];
