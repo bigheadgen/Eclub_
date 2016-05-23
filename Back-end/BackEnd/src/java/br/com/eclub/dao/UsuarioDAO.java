@@ -10,14 +10,12 @@ import java.util.Date;
  *
  * @author Thierry Freire
  */
-public class UsuárioDAO {
+public class UsuarioDAO {
     
     private Connection conLocal;
     
-    public UsuárioDAO(){
-       ConnectionFactory con = new ConnectionFactory ();
-       conLocal = con.getConnection();
-        
+    public UsuarioDAO(){
+       
     }
     //Método de buscar usuário
     public Usuario BuscarUsuario (String RedeSocial) throws SQLException{
@@ -30,17 +28,18 @@ public class UsuárioDAO {
          stmt = conLocal.prepareStatement(s);
          stmt.setString(1, aux.getRedeSocial());
          
-         ResultSet rs = stmt.executeQuery();
-         
-         while(rs.next()) {
-         aux.setRedeSocial(rs.getString("redeSocial"));
-         aux.setDataNascimento(rs.getDate("dataNascimento"));
-         aux.setSexo(rs.getBoolean("sexo"));
-         aux.setNomeUser(rs.getString("nome_User"));
-         aux.setTelefoneUser(rs.getString("telefone_User"));
-         aux.setEmailUser(rs.getString("email_User"));         
-         }         
-         rs.close();
+        try (ResultSet rs = stmt.executeQuery()) {
+            while(rs.next()) {
+                aux.setRedeSocial(rs.getString("redeSocial"));
+                aux.setDataNascimento(rs.getDate("dataNascimento"));
+                aux.setSexo(rs.getBoolean("sexo"));
+                aux.setNomeUser(rs.getString("nome_User"));
+                aux.setTelefoneUser(rs.getString("telefone_User"));
+                aux.setEmailUser(rs.getString("email_User"));
+            }
+        }
+        
+        
          stmt.close();
          conLocal.close();
          

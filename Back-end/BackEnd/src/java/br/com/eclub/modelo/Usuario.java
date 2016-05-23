@@ -18,12 +18,16 @@ public class Usuario {
     //Construtor a rede social é obrigatorio para o cadastro do usuario.
     public Usuario(String redeSocial){
         this.redeSocial = redeSocial;        
-    }
+    }    
 
     public Usuario() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
-    
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "nomeUser=" + nomeUser + ", emailUser=" + emailUser + ", sexo=" + sexo + ", telefoneUser=" + telefoneUser + ", dataNascimento=" + dataNascimento + ", redeSocial=" + redeSocial + '}';
+    }
     
     //gets e sets
     public String getNomeUser() {
