@@ -15,11 +15,7 @@ public class UsuarioDAO {
     private Connection conLocal;
     
     public UsuarioDAO(){
-<<<<<<< HEAD:Back-end/BackEnd/src/java/br/com/eclub/dao/UsuarioDAO.java
-       
-=======
-      
->>>>>>> fbd358a2f22be4889fe4e95b5dfc968afd50c7fe:Back-end/BackEnd/src/java/br/com/eclub/dao/UsuarioDAO.java
+
     }
     //Método de buscar usuário
     public Usuario BuscarUsuario (String RedeSocial) throws SQLException{
@@ -101,7 +97,7 @@ public class UsuarioDAO {
            conLocal = new ConnectionFactory().getConnection();
            PreparedStatement stmt = conLocal.prepareStatement("UPDATE USUARIO "
                    + "SET dataNascimento =?, redeSocial = ?, sexo = ?, nome_User = ?, telefone_User = ?,"
-                   + " email_User");
+                   + " email_User WHERE redeSocial = ?");
            ResultSet rs = stmt.executeQuery();
            while(rs.next()) {
                 aux.setRedeSocial(rs.getString("redeSocial"));
