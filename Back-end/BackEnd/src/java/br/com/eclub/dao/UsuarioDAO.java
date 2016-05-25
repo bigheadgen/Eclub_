@@ -20,6 +20,7 @@ public class UsuarioDAO {
     //Método de buscar usuário
     public Usuario BuscarUsuario (String RedeSocial) throws SQLException{
         Usuario aux = new Usuario();
+        aux.setRedeSocial(RedeSocial);
         //Query no banco fazendo solicitação de busca da variável
 
          conLocal = new ConnectionFactory().getConnection();
@@ -43,16 +44,14 @@ public class UsuarioDAO {
          stmt.close();
          conLocal.close();
          
-         return aux; // falta implementar a busca
-
+         return aux; 
          
     }
     //Método de remover usuário
     public void RemoverUsuario (Usuario aux) throws SQLException{
-        Usuario user = BuscarUsuario(aux.getRedeSocial());
         //Query de validar se o usuário exise para remoção;
 
-        if (user.getRedeSocial()!= null){
+        if (BuscarUsuario(aux.getRedeSocial())!= null){
            String sql = ("DELETE FROM Usuario WHERE RedeSocial = ?;");
            
          conLocal = new ConnectionFactory().getConnection();
@@ -92,12 +91,15 @@ public class UsuarioDAO {
         
     }
     //Método para alterar dados do usuário
-    public Usuario AlterarUsuario (Usuario aux) throws SQLException{
+    public Usuario AlterarUsuario (String redeSocial) throws SQLException{
+        Usuario aux = new Usuario();
+        aux.setRedeSocial(redeSocial);
+        //Query de alterar usuário
         if (BuscarUsuario(aux.getRedeSocial())!= null){
            conLocal = new ConnectionFactory().getConnection();
            PreparedStatement stmt = conLocal.prepareStatement("UPDATE USUARIO "
                    + "SET dataNascimento =?, redeSocial = ?, sexo = ?, nome_User = ?, telefone_User = ?,"
-                   + " email_User WHERE redeSocial = ?");
+                   + " email_User = ? WHERE redeSocial = ?");
            ResultSet rs = stmt.executeQuery();
            while(rs.next()) {
                 aux.setRedeSocial(rs.getString("redeSocial"));

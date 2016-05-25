@@ -19,9 +19,11 @@ public class Divulgador {
         this.nomeDivulgador = nomeDivulgador;
         this.cnpj = cnpj;
     }
-    
-    
-    
+
+    public Divulgador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     //gets e sets
     public String getNomeDivulgador() {
         return nomeDivulgador;
