@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.eclub.bean;
+package br.com.eclub.ws;
 
 /**
  *
  * @author Gustavo
  */
-public class EnderecoBean {
+public class DivulgadorWS {
     
 }
