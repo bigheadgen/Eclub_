@@ -1,7 +1,9 @@
 package br.com.eclub.controller;
 
 import br.com.eclub.dao.EventoDAO;
+import br.com.eclub.modelo.Evento;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /*
