@@ -1,9 +1,12 @@
 package br.com.eclub.modelo;
 import java.util.Date;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 /**
  *
  * @author Gustavo
  */
+@XmlRootElement
 public class Usuario {
     
     private String nomeUser;

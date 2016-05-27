@@ -24,7 +24,23 @@ public class EventoDAO {
     public void inserirEvento(Evento evento) {
         Evento e = new Evento();
         e = evento;
-        String sql = "ISERT INTO Evento VALUES ('?', '?', '?', '?', '?', '?', '?', '?', '?')";
+        String sql = "INSERT INTO Evento VALUES ('?', '?', '?', '?', '?', '?', '?', '?', '?')";
         //terminar execução do código SQL
+    }
+    public List<Evento> listarEventos(String local) throws SQLException{
+        
+        //falar com andre para ele criar o codigo sql para o select no banco 
+        //para trazer todos os eventos aparti de um  local 
+        String sql = "SELECT * FROM Evento WHERE ";
+        PreparedStatement stmt = conLocal.prepareStatement(sql);
+        ResultSet rs = stmt.executeQuery();
+        
+        List<Evento> eventos = new ArrayList<>();
+        while (rs.next()){
+            //continuar codigo 
+            //responsavel
+        }
+        
+        return eventos;
     }
 }

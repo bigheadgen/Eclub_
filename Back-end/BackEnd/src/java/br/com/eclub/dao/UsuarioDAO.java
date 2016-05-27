@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
-
 /**
  *
  * @author Thierry Freire
@@ -15,7 +14,6 @@ public class UsuarioDAO {
     private Connection conLocal;
     
     public UsuarioDAO(){
-
     }
     //Método de buscar usuário
     public Usuario BuscarUsuario (String RedeSocial) throws SQLException{

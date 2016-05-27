@@ -2,11 +2,13 @@ package br.com.eclub.modelo;
 
 import java.sql.Time;
 import java.util.Date;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author Gustavo
  */
+@XmlRootElement
 public class Evento {
     
     private Divulgador divulgador;

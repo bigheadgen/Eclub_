@@ -2,7 +2,6 @@ package br.com.eclub.teste;
 
 import br.com.eclub.dao.UsuarioDAO;
 import br.com.eclub.modelo.Usuario;
-import com.sun.corba.se.impl.protocol.giopmsgheaders.ReplyMessage;
 import java.sql.SQLException;
 
 /**

@@ -1,8 +1,12 @@
 package br.com.eclub.modelo;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author Gustavo
  */
+@XmlRootElement
 public class Divulgador {
     
     private String nomeDivulgador;
