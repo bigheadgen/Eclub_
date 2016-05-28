@@ -24,12 +24,6 @@
 		font-size: 16px;
 		font-family: 'Raleway', sans-serif;
 	}
-
-	#divulgadores{
-		color: #FF8819;	
-	}
-
-
 	#grid_1{
 		margin-left: 20%;
 		margin-right: 20%;
@@ -155,14 +149,6 @@
 		background-color: white solid;
 	}
 
-	footer{
-		width: 100%;
-		height: auto;
-		min-height: 2%;
-		margin-top: 1%;
-	}
-
-
 	h1,h3{
 		text-align: center;
 		font-family: 'Raleway', sans-serif;
@@ -177,6 +163,13 @@
 		font-size: 90px;
 		color:#000;
 
+	}
+
+	footer{
+		width: 100%;
+		height: auto;
+		min-height: 2%;
+		margin-top: 1%;
 	}
 
 	cite{
