@@ -2,7 +2,7 @@ var emailsValidos = ["hotmal.com" , "outlook.com", "gmail.com"];
 	
 	function esqueciMinhaSenha(){
 
-		var email = prompt("Enviaremos uma nova senha para seu email");
+		var email = prompt("Enviaremos uma nova senha para seu email!");
 	}
 
 	function cadastraDivulgador(){
