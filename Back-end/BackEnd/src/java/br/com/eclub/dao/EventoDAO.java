@@ -60,6 +60,7 @@ public class EventoDAO {
             
            
         }
+        conLocal.close();
         
         return eventos;
     }
