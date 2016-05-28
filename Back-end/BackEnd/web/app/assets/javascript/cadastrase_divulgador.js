@@ -12,7 +12,7 @@ var emailsValidos = ["hotmal.com" , "outlook.com", "gmail.com"];
     	    (usuario.search(" ")==-1) && (dominio.search(" ")==-1) && (dominio.search(".")!=-1) &&   
     	    (dominio.indexOf(".") >=1)&& (dominio.lastIndexOf(".") < dominio.length - 1)) {
 
-				alert("A ajuda está a caminho!");
+				alert("Enviamos instruções para seu email!");
 			}
 
 	else{ 
