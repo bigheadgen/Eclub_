@@ -1,8 +1,7 @@
 package br.com.eclub.ws;
 
-import br.com.eclub.controller.EventoController;
+
 import br.com.eclub.modelo.Evento;
-import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
