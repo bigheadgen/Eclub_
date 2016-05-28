@@ -23,6 +23,10 @@ public class Endereco {
         this.latitude = latitude;
         this.longetude = longetude;
     }
+
+    public Endereco() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
         
     //gets e sets
     public String getEstado() {

@@ -31,8 +31,9 @@ public class EventoDAO {
     public List<Evento> listarEventos(Endereco endereco) throws SQLException{
         
         //falar com andre para ele criar o codigo sql para o select no banco 
-        //para trazer todos os eventos aparti de um  local 
-        String sql = "SELECT * FROM Evento WHERE cidade=?";
+        //para trazer todos os eventos a partir de um  local 
+        String sql = "SELECT * FROM Evento E, Endereco D WHERE E.id_Endereco = ? AND D.cidade = ?;";
+        //Verificar se o select está realmente correto
         PreparedStatement stmt = conLocal.prepareStatement(sql);
         stmt.setString(1, endereco.getCidade());
         ResultSet rs = stmt.executeQuery();

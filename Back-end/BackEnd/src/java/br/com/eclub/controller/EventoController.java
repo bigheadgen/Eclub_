@@ -1,6 +1,7 @@
 package br.com.eclub.controller;
 
 import br.com.eclub.dao.EventoDAO;
+import br.com.eclub.modelo.Endereco;
 import br.com.eclub.modelo.Evento;
 import java.sql.SQLException;
 import java.util.List;
@@ -17,23 +18,14 @@ import java.util.logging.Logger;
  */
 public class EventoController {
 
-    public List<Evento> ListarEventos(String local) {
+    public List<Evento> ListarEventos(String local) throws SQLException {
         List<Evento> todosEventos;
         EventoDAO evento = new EventoDAO();
-
-        //aqui deve entrar as validacoes 
-        //e tratamentos 
-        //para fazer a busca no banco
-        //reponsavel fazer
-        try {
-            
-            return evento.listarEventos(local);
-
-        } catch (SQLException ex) {
-
-        }
-
-        return null;
+        Endereco endereco = new Endereco ();
+        
+        return evento.listarEventos(endereco);
+       
     }
 
 }
+
