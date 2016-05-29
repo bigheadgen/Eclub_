@@ -5,10 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
-/**
- *
- * @author Thierry Freire
- */
+//@author Thierry Freire
 public class UsuarioDAO {
     
     private Connection conLocal;
@@ -37,13 +34,9 @@ public class UsuarioDAO {
                 aux.setEmailUser(rs.getString("email_User"));
             }
         }
-        
-        
          stmt.close();
          conLocal.close();
-         
-         return aux; 
-         
+         return aux;
     }
     //Método de remover usuário
     public void RemoverUsuario (Usuario aux) throws SQLException{
@@ -59,7 +52,6 @@ public class UsuarioDAO {
          stmt.close();
          conLocal.close();
         }
-      
     }
     //Método de Cadastrar usuário
     public Usuario CadastrarUsuario (Usuario aux) throws SQLException{
@@ -83,10 +75,8 @@ public class UsuarioDAO {
            conLocal.close();
            return aux;
         } else{
-            return null;
-            
+            return null; 
         }
-        
     }
     //Método para alterar dados do usuário
     public Usuario AlterarUsuario (String redeSocial) throws SQLException{
@@ -111,9 +101,7 @@ public class UsuarioDAO {
            return aux; 
         } else {
            return null;
-        }
-            
+        }    
     }
-  
 }
     

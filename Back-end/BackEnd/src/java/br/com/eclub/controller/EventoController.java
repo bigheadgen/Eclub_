@@ -12,20 +12,16 @@ import java.util.logging.Logger;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-/**
- *
- * @author Gustavo
- */
+//@author Gustavo
 public class EventoController {
-
+    public EventoController(){
+    }
     public List<Evento> ListarEventos(String local) throws SQLException {
         List<Evento> todosEventos;
         EventoDAO evento = new EventoDAO();
         Endereco endereco = new Endereco ();
         
         return evento.listarEventos(endereco);
-       
     }
-
 }
 

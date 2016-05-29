@@ -4,11 +4,7 @@
  * and open the template in the editor.
  */
 package br.com.eclub.dao;
-
-/**
- *
- * @author Thierry
- */
+//@author Thierry
 public class EnderecoDAO {
-    
+   public EnderecoDAO(){} 
 }

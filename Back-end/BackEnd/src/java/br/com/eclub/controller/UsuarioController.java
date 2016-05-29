@@ -4,11 +4,6 @@
  * and open the template in the editor.
  */
 package br.com.eclub.controller;
-
-/**
- *
- * @author Thierry Freire
- */
+//@author Thierry Freire
 public class UsuarioController { 
-    
 }

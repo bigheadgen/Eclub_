@@ -1,5 +1,4 @@
 package br.com.eclub.dao;
-
 import br.com.eclub.modelo.Endereco;
 import br.com.eclub.modelo.Evento;
 import java.sql.Connection;
@@ -11,11 +10,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-/**
- *
- * @author Gustavo, Thierry Freire
- */
+//@author Gustavo, Thierry Freire
 public class EventoDAO {
 
     private Connection conLocal;
@@ -24,7 +19,6 @@ public class EventoDAO {
         ConnectionFactory con = new ConnectionFactory();
         conLocal = con.getConnection();
     }
-
     public void inserirEvento(Evento evento) throws SQLException {
         Evento e = new Evento();
         Endereco end = new Endereco(null, null);
@@ -52,9 +46,7 @@ public class EventoDAO {
             Logger.getLogger(EventoDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         conLocal.close();
-        
     }
-
     public boolean excluirEvento(Evento evento) throws SQLException {
 
         String sql = "DELETE from evento where id_evento = ?";
@@ -68,9 +60,7 @@ public class EventoDAO {
         } catch (SQLException e) {
             return false;
         }
-        
     }
-
     public Evento pesquisarEvento(String cidade) throws SQLException {
 
         Evento eve = new Evento();
@@ -99,8 +89,7 @@ public class EventoDAO {
         } catch (SQLException e) {
             return null;
         }
-      }
-    
+    }
     public List<Evento> listarEventos(Endereco endereco) throws SQLException {
         
         //falar com andre para ele criar o codigo sql para o select no banco 
@@ -129,13 +118,8 @@ public class EventoDAO {
             
             //apos o evento estar completo deve ser adicionado a lista de eventos
             eventos.add(ev);
-                        
-            
-           
-        }
-               
+        }     
         return eventos;
     }
-
 }
 

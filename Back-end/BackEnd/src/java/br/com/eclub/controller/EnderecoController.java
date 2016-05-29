@@ -4,12 +4,7 @@ package br.com.eclub.controller;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
-/**
- *
- * @author Gustavo
- */
-public class EnderecoController {
-    
-}
+//@author Gustavo
+ public class EnderecoController {
+     public EnderecoController(){}
+ }

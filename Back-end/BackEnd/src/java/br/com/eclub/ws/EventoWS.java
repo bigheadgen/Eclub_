@@ -1,6 +1,5 @@
 package br.com.eclub.ws;
 
-
 import br.com.eclub.controller.EventoController;
 import br.com.eclub.modelo.Endereco;
 import br.com.eclub.modelo.Evento;
@@ -15,24 +14,17 @@ import javax.ws.rs.Produces;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
-
-/**
- *
- * @author Gustavo
- */
+//@author Gustavo
 @Path("/evento")
 public class EventoWS {
- 
+
     @GET
     @Path("/listarTodosEventos")
     @Produces("application/json")
-    public List<Evento> listarEventos(String local) throws SQLException{
+    public List<Evento> listarEventos(String local) throws SQLException {
         EventoController ec = new EventoController();
-        Endereco endereco = new Endereco ();
-        
+        Endereco endereco = new Endereco();
+
         return ec.ListarEventos(local);
     }
-    
 }

@@ -4,11 +4,6 @@
  * and open the template in the editor.
  */
 package br.com.eclub.ws;
-
-/**
- *
- * @author Gustavo
- */
+//@author Gustavo
 public class DivulgadorWS {
-    
 }
