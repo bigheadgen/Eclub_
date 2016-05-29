@@ -10,7 +10,6 @@ public class Endereco {
     private int numero;
     private String latitude;
     private String longetude;
-    private int idEndereco;
             
     //construtor, a latitude e longetude sao obrigatorios 
     public Endereco(String latitude, String longetude){
@@ -63,10 +62,4 @@ public class Endereco {
     public void setLongetude(String longetude) {
         this.longetude = longetude;
     }
-    public int getIdEndereco() {
-        return idEndereco;
-    }
-    public void setIdEndereco(int idEndereco) {
-        this.idEndereco = idEndereco;
-    } 
 }

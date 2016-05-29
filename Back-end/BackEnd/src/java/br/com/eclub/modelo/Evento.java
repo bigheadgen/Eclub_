@@ -1,7 +1,5 @@
 package br.com.eclub.modelo;
-
-import java.sql.Time;
-import java.util.Date;
+import java.util.Calendar;
 import javax.xml.bind.annotation.XmlRootElement;
 //@author Gustavo
 @XmlRootElement
@@ -10,9 +8,6 @@ public class Evento {
     private Divulgador divulgador;
     private Endereco endereco;
     private String nomeEvento;
-    /*o id provavelmente vai ser um auto incremente
-    no banco entao falta alinhar com a equipe de banco de dados
-    */
     private int idEvento;
     private String tipoEvento;
     private int qntHomens;
@@ -20,18 +15,12 @@ public class Evento {
     private int lotacaoMaxima;
     private double valorEntrada;
     private String descricaoEvento;
-    private Date data;
-    private Time horaEvento;
-    //adicionar o atributo da foto
-    
-    
-//    //Construtor é obrigatorio um divulgador e um endereco
-//    public Evento(Divulgador divulgador, Endereco endereco){
-//        this.divulgador = divulgador;
-//        this.endereco = endereco;
-//    }
+    private Calendar data;
 
-    
+    public Evento(Divulgador divulgador, Endereco endereco){
+        this.divulgador = divulgador;
+        this.endereco = endereco;
+    }
     //gets e sets
     public Divulgador getDivulgador() {
         return divulgador;
@@ -93,16 +82,10 @@ public class Evento {
     public void setDescricaoEvento(String descricaoEvento) {
         this.descricaoEvento = descricaoEvento;
     }
-    public Date getData() {
+    public Calendar getData() {
         return data;
     }
-    public void setData(Date data) {
+    public void setData(Calendar data) {
         this.data = data;
     }
-    public Time getHoraEvento() {
-        return horaEvento;
-    }
-    public void setHoraEvento(Time horaEvento) {
-        this.horaEvento = horaEvento;
-    } 
 }

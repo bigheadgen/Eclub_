@@ -6,13 +6,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Divulgador {
     
     private String nomeDivulgador;
+    private String cnpj;
     private String emailDivulgador;
     private String telefoneDivulgador;
-    private String tipoDivulgador;
-    private Endereco endereco;
-    private String cnpj;
     private String senhaDivulgador;
-
+    private Endereco endereco;
     
     //No Divulgador para o cadastro é obrigatorio o nome e o cnpj
     public Divulgador(String nomeDivulgador,String cnpj){
@@ -46,12 +44,6 @@ public class Divulgador {
     }
     public void setTelefoneDivulgador(String telefoneDivulgador) {
         this.telefoneDivulgador = telefoneDivulgador;
-    }
-    public String getTipoDivulgador() {
-        return tipoDivulgador;
-    }
-    public void setTipoDivulgador(String tipoDivulgador) {
-        this.tipoDivulgador = tipoDivulgador;
     }
     public String getCnpj() {
         return cnpj;

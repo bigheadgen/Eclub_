@@ -1,6 +1,5 @@
 package br.com.eclub.modelo;
-import java.util.Date;
-import javax.xml.bind.annotation.XmlElement;
+import java.util.Calendar;
 import javax.xml.bind.annotation.XmlRootElement;
 //@author Gustavo
 @XmlRootElement
@@ -10,14 +9,13 @@ public class Usuario {
     private String emailUser;
     private boolean sexo;
     private String telefoneUser;
-    private Date dataNascimento;
+    private Calendar dataNascimento;
     private String redeSocial;
-    //Lembre de adicionar o atributo para a foto do usuario.
-    //Construtor a rede social é obrigatorio para o cadastro do usuario.
+    
     public Usuario(String redeSocial){
         this.redeSocial = redeSocial;        
     }    
-    public Usuario() {}
+    public Usuario(){}
 
     @Override
     public String toString() {
@@ -48,10 +46,10 @@ public class Usuario {
     public void setTelefoneUser(String telefoneUser) {
         this.telefoneUser = telefoneUser;
     }
-    public Date getDataNascimento() {
+    public Calendar getDataNascimento() {
         return dataNascimento;
     }
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(Calendar dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
     public String getRedeSocial() {
