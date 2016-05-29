@@ -23,23 +23,22 @@ public class EventoDAO {
         Evento e = new Evento();
         Endereco end = new Endereco(null, null);
         e = evento;
-        String sql = "INSERT INTO evento (qntHomem, valorEntrada, qntMulher, qntMaxPessoas, idEvento, nome_Evento, tipo_Evento, data_Evento,hora_Evento, descrição_Evento, id_Endereco, nome_Emp, cnpj_Emp)";
+        String sql = "INSERT INTO evento (qntMulher, descricaoEvento, valorEvento, qntHomem,"
+                + "qntMaxPessoas, nomeEvento, tipoEvento, idEvento, cnpjDivulgador, nomeDivulgador)"
+                + "VALUES(?,?,?,?,?,?,?,?,?,?)";
 
         try (PreparedStatement stmt = conLocal.prepareStatement(sql)) {
-            stmt.setInt(1, evento.getQntHomens());
-            stmt.setDouble(2, evento.getValorEntrada());
-            stmt.setInt(3, evento.getQntmulheres());
-            stmt.setInt(4, evento.getLotacaoMaxima());
-            stmt.setInt(5, evento.getIdEvento());
+            stmt.setInt(1, evento.getQntmulheres());
+            stmt.setString(2, evento.getDescricaoEvento());
+            stmt.setDouble(3, evento.getValorEntrada());
+            stmt.setInt(4, evento.getQntHomens());
+            stmt.setInt(5, evento.getLotacaoMaxima());
             stmt.setString(6, evento.getNomeEvento());
             stmt.setString(7, evento.getTipoEvento());
-            stmt.setDate(8, (java.sql.Date) (Date) evento.getData());
-            stmt.setTime(9, evento.getHoraEvento());
-            stmt.setString(10, evento.getDescricaoEvento());
-            stmt.setInt(11, evento.getEndereco().getIdEndereco());
-            stmt.setString(12, evento.getDivulgador().getNomeDivulgador());
-            stmt.setString(13, evento.getDivulgador().getCnpj());
-
+            stmt.setInt(8, evento.getIdEvento());
+            stmt.setString(9, evento.getDivulgador().getCnpj());
+            stmt.setString(10, evento.getDivulgador().getNomeDivulgador());
+          
             stmt.executeQuery();
 
         } catch (SQLException ex) {

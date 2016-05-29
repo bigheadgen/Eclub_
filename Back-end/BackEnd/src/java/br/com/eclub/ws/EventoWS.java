@@ -24,7 +24,6 @@ public class EventoWS {
     public List<Evento> listarEventos(String local) throws SQLException {
         EventoController ec = new EventoController();
         Endereco endereco = new Endereco();
-
         return ec.ListarEventos(local);
     }
 }

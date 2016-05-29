@@ -21,6 +21,9 @@ public class Evento {
         this.divulgador = divulgador;
         this.endereco = endereco;
     }
+    public Evento() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     //gets e sets
     public Divulgador getDivulgador() {
         return divulgador;
