@@ -9,7 +9,7 @@ public class TestUsuarioDAO {
     public static void main(String[] Args) throws SQLException {
         Usuario usuario = new Usuario();
         UsuarioDAO dao = new UsuarioDAO();
-        usuario = dao.BuscarUsuario("face");
+        usuario = dao.BuscarUsuario(usuario);
 
         usuario.toString();
     }
