@@ -11,7 +11,8 @@ public class Divulgador {
     private String telefoneDivulgador;
     private String senhaDivulgador;
     private Endereco endereco;
-    
+    private String tipoDivulgador;
+
     //No Divulgador para o cadastro é obrigatorio o nome e o cnpj
     public Divulgador(String nomeDivulgador,String cnpj){
         this.nomeDivulgador = nomeDivulgador;
@@ -21,6 +22,13 @@ public class Divulgador {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     //gets e sets
+    public String getTipoDivulgador() {
+        return tipoDivulgador;
+    }
+
+    public void setTipoDivulgador(String tipoDivulgador) {
+        this.tipoDivulgador = tipoDivulgador;
+    }
     public String getNomeDivulgador() {
         return nomeDivulgador;
     }

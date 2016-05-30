@@ -78,7 +78,7 @@ public class EventoDAO {
                 eve.setQntHomens(rs.getInt("qntHomem"));
                 eve.setQntmulheres(rs.getInt("qntMulher"));
                 eve.setTipoEvento(rs.getString("tipo_Evento"));
-                eve.setData(rs.getDate("data_Evento"));
+                eve.setData(rs.getCalendar("data_Evento"));
                 eve.setHoraEvento(rs.getTime("hora_Evento"));
                 eve.setDescricaoEvento(rs.getString("descrição_Evento"));
 

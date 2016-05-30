@@ -1,4 +1,5 @@
 package br.com.eclub.modelo;
+import java.sql.Time;
 import java.util.Calendar;
 import javax.xml.bind.annotation.XmlRootElement;
 //@author Gustavo
@@ -16,6 +17,7 @@ public class Evento {
     private double valorEntrada;
     private String descricaoEvento;
     private Calendar data;
+    private Time horaEvento;
 
     public Evento(Divulgador divulgador, Endereco endereco){
         this.divulgador = divulgador;
@@ -25,6 +27,13 @@ public class Evento {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     //gets e sets
+    public void setHoraEvento(Time horaEvento) {
+        this.horaEvento = horaEvento;
+    }
+
+    public Time getHoraEvento() {
+        return horaEvento;
+    }
     public Divulgador getDivulgador() {
         return divulgador;
     }

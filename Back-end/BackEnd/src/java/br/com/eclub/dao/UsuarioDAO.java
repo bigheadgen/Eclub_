@@ -66,7 +66,7 @@ public class UsuarioDAO {
            ResultSet rs = stmt.executeQuery();
            while(rs.next()) {
                 aux.setRedeSocial(rs.getString("redeSocial"));
-                aux.setDataNascimento(rs.getDate("dataNascimento"));
+                aux.setDataNascimento(rs.getCalendar("dataNascimento"));
                 aux.setSexo(rs.getBoolean("sexo"));
                 aux.setNomeUser(rs.getString("nome_User"));
                 aux.setTelefoneUser(rs.getString("telefone_User"));

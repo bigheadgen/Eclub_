@@ -128,6 +128,32 @@ public class EnderecoDAO {
         }
     return enderecos;
     }
+    public Endereco AlterarEndereco (Endereco aux) throws SQLException{
+        if (buscaEndereco(aux) != null){
+            conLocal = new ConnectionFactory().getConnection();
+            String sql = "UPDATE TABLE endereco SET cidade = ?, rua = ?, estado = ?, numero = ?, latitude = ?,"
+                    + "longitude = ?, bairro = ? WHERE latitude = ? AND longitude = ?;";
+            try{
+                PreparedStatement stmt = conLocal.prepareStatement(sql);
+                stmt.setString(1, aux.getEstado());
+                ResultSet rs = stmt.executeQuery();
+                while (rs.next()){
+                    aux.setBairro(rs.getString("bairro"));
+                    aux.setCidade(rs.getString("cidade"));
+                    aux.setEstado(rs.getString("estado"));
+                    aux.setLatitude(rs.getString("latitude"));
+                    aux.setLongetude(rs.getString("longitude"));
+                    aux.setNumero(rs.getInt("numero"));
+                    aux.setRua(rs.getString("rua"));
+                } 
+            }catch (SQLException ex){
+                    Logger.getLogger(EnderecoDAO.class.getName()).log(Level.SEVERE, null, ex);    
+            }
+            return aux;    
+        } else {
+            return null;
+        }
+    }
     public List<Endereco> ListarEnderecosBairro(String bairro){
         List<Endereco> enderecos = new ArrayList<>();
         
