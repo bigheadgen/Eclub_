@@ -4,7 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 //@author Thierry Freire
 public class UsuarioDAO {
     
@@ -13,95 +16,84 @@ public class UsuarioDAO {
     public UsuarioDAO(){
     }
     //Método de buscar usuário
-    public Usuario BuscarUsuario (String RedeSocial) throws SQLException{
-        Usuario aux = new Usuario();
-        aux.setRedeSocial(RedeSocial);
-        //Query no banco fazendo solicitação de busca da variável
-
-         conLocal = new ConnectionFactory().getConnection();
-         String s = "SELECT RedeSocial FROM Usuario WHERE RedeSocial = ?;";
-         PreparedStatement stmt;
-         stmt = conLocal.prepareStatement(s);
-         stmt.setString(1, aux.getRedeSocial());
-         
-        try (ResultSet rs = stmt.executeQuery()) {
-            while(rs.next()) {
-                aux.setRedeSocial(rs.getString("redeSocial"));
-                aux.setDataNascimento(rs.getDate("dataNascimento"));
-                aux.setSexo(rs.getBoolean("sexo"));
-                aux.setNomeUser(rs.getString("nome_User"));
-                aux.setTelefoneUser(rs.getString("telefone_User"));
-                aux.setEmailUser(rs.getString("email_User"));
+    public Usuario BuscarUsuario (Usuario usuario){
+        String sql = "SELECT * FROM Usuario WHERE idRedeSocial=?";
+        conLocal = new ConnectionFactory().getConnection();
+        try {
+            Usuario user = new Usuario();
+            PreparedStatement stmt = conLocal.prepareStatement(sql);
+            stmt.setInt(1, usuario.getRedeSocial());
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()){
+            user.setNomeUser(rs.getString("nomeUsuario"));
+            user.setEmailUser(rs.getString("emailUsuario"));
+            user.setSexo(rs.getInt("sexo"));
+            user.setTelefoneUser("telefoneUsuario");
+            Calendar data = Calendar.getInstance();
+            data.setTime(rs.getDate("dataNascimento"));
+            user.setDataNascimento(data);
+            user.setRedeSocial(rs.getInt("idRedeSocial"));
             }
+            stmt.close();
+            rs.close();
+            return user;
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
         }
-         stmt.close();
-         conLocal.close();
-         return aux;
     }
     //Método de remover usuário
-    public void RemoverUsuario (Usuario aux) throws SQLException{
-        //Query de validar se o usuário exise para remoção;
-
-        if (BuscarUsuario(aux.getRedeSocial())!= null){
-           String sql = ("DELETE FROM Usuario WHERE RedeSocial = ?;");
-           
-         conLocal = new ConnectionFactory().getConnection();
-         PreparedStatement stmt;
-         stmt = conLocal.prepareStatement(sql);
-         stmt.setString(1, aux.getRedeSocial());
-         stmt.close();
-         conLocal.close();
+    public void RemoverUsuario (Usuario usuario){
+       String sql = "DELETE FROM Usuario WHERE idRedeSocial= ?";
+       conLocal = new ConnectionFactory().getConnection();
+        PreparedStatement stmt ;
+        try {
+            stmt = conLocal.prepareStatement(sql);
+            stmt.setInt(1, usuario.getRedeSocial());
+            stmt.execute();
+            stmt.close();
+            conLocal.close();
+        } catch (SQLException ex) {
+         throw new RuntimeException(ex);
         }
     }
     //Método de Cadastrar usuário
-    public Usuario CadastrarUsuario (Usuario aux) throws SQLException{
-        Usuario validacao = new Usuario();
-        validacao = BuscarUsuario(aux.getRedeSocial());
-        Date data = new Date();
-        //Query de cadastrar usuário
-        if (validacao == null){
+    public void CadastrarUsuario (Usuario usuario){
+        String sql ="INSERT INTO Usuario(nomeUsuario, sexo, dataNascimento, EmailUsuario, telefoneUsuario, idRedeSocial)"
+                + "VALUES(?,?,?,?,?,?)";
            conLocal = new ConnectionFactory().getConnection();
-           PreparedStatement stmt = conLocal.prepareStatement("INSERT INTO USUARIO "
-                   + "Values ('?', '?', '?', '?', '?', '?', '?')");
-           ResultSet rs = stmt.executeQuery();
-           while(rs.next()) {
-                aux.setRedeSocial(rs.getString("redeSocial"));
-                aux.setDataNascimento(rs.getCalendar("dataNascimento"));
-                aux.setSexo(rs.getBoolean("sexo"));
-                aux.setNomeUser(rs.getString("nome_User"));
-                aux.setTelefoneUser(rs.getString("telefone_User"));
-                aux.setEmailUser(rs.getString("email_User"));         
-         }         
+        try (PreparedStatement stmt = conLocal.prepareStatement(sql)) {
+           stmt.setString(1, usuario.getNomeUser());
+           stmt.setInt(2, usuario.getSexo());
+           stmt.setDate(3, (java.sql.Date) new Date(usuario.getDataNascimento().getTimeInMillis()));
+           stmt.setString(4, usuario.getEmailUser());
+           stmt.setString(5, usuario.getTelefoneUser());
+           stmt.setInt(6, usuario.getRedeSocial());
+           stmt.execute();
+           stmt.close();
            conLocal.close();
-           return aux;
-        } else{
-            return null; 
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
         }
     }
     //Método para alterar dados do usuário
-    public Usuario AlterarUsuario (String redeSocial) throws SQLException{
-        Usuario aux = new Usuario();
-        aux.setRedeSocial(redeSocial);
-        //Query de alterar usuário
-        if (BuscarUsuario(aux.getRedeSocial())!= null){
-           conLocal = new ConnectionFactory().getConnection();
-           PreparedStatement stmt = conLocal.prepareStatement("UPDATE USUARIO "
-                   + "SET dataNascimento =?, redeSocial = ?, sexo = ?, nome_User = ?, telefone_User = ?,"
-                   + " email_User = ? WHERE redeSocial = ?");
-           ResultSet rs = stmt.executeQuery();
-           while(rs.next()) {
-                aux.setRedeSocial(rs.getString("redeSocial"));
-                aux.setDataNascimento(rs.getDate("dataNascimento"));
-                aux.setSexo(rs.getBoolean("sexo"));
-                aux.setNomeUser(rs.getString("nome_User"));
-                aux.setTelefoneUser(rs.getString("telefone_User"));
-                aux.setEmailUser(rs.getString("email_User"));
-           }
-           conLocal.close();
-           return aux; 
-        } else {
-           return null;
-        }    
+    public void AlterarUsuario (Usuario usuario) throws SQLException{
+        String sql ="UPDATE TABLE Usuario SET nomeUsuario = ?, emailUsuario = ?, sexo = ?, "
+                + "telefoneUsuario = ?, idRedeSocial = ?, dataNascimento=? WHERE idRedeSocial = ?";
+        conLocal = new ConnectionFactory().getConnection();
+        try (PreparedStatement stmt = conLocal.prepareStatement(sql)) {
+            stmt.setString(1, usuario.getNomeUser());
+            stmt.setString(2, usuario.getEmailUser());
+            stmt.setInt(3, usuario.getSexo());
+            stmt.setString(4, usuario.getTelefoneUser());
+            stmt.setInt(5, usuario.getRedeSocial());
+            stmt.setDate(6, (java.sql.Date) new Date(usuario.getDataNascimento().getTimeInMillis()));
+            stmt.setInt(7, usuario.getRedeSocial()); 
+            stmt.execute();
+            stmt.close();
+            conLocal.close();
+        }catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 }
     

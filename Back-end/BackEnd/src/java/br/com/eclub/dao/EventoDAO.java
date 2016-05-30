@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -78,7 +78,9 @@ public class EventoDAO {
                 eve.setQntHomens(rs.getInt("qntHomem"));
                 eve.setQntmulheres(rs.getInt("qntMulher"));
                 eve.setTipoEvento(rs.getString("tipo_Evento"));
-                eve.setData(rs.getCalendar("data_Evento"));
+                Calendar data = Calendar.getInstance();
+                data.setTime(rs.getDate("data_Evento"));
+                eve.setData(data);
                 eve.setHoraEvento(rs.getTime("hora_Evento"));
                 eve.setDescricaoEvento(rs.getString("descrição_Evento"));
 
@@ -105,7 +107,9 @@ public class EventoDAO {
             ev.setNomeEvento(rs.getString("nome_Evento"));
             ev.setTipoEvento(rs.getString("tipo_Evento"));
             ev.setValorEntrada(rs.getDouble("valorEntrada"));
-            ev.setData(rs.getDate("data_Evento"));
+            Calendar data = Calendar.getInstance();
+            data.setTime(rs.getDate("data_Evento"));
+            ev.setData(data);
             ev.setLotacaoMaxima(rs.getByte("qntMaxPessoas"));
             ev.setHoraEvento(rs.getTime("hora_Evento"));
             ev.setQntHomens(rs.getInt("qntHomem"));

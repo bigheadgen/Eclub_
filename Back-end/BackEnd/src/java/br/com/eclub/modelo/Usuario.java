@@ -7,12 +7,12 @@ public class Usuario {
     
     private String nomeUser;
     private String emailUser;
-    private boolean sexo;
+    private int sexo;
     private String telefoneUser;
     private Calendar dataNascimento;
-    private String redeSocial;
+    private int redeSocial;
     
-    public Usuario(String redeSocial){
+    public Usuario(int redeSocial){
         this.redeSocial = redeSocial;        
     }    
     public Usuario(){}
@@ -34,10 +34,10 @@ public class Usuario {
     public void setEmailUser(String emailUser) {
         this.emailUser = emailUser;
     }
-    public boolean isSexo() {
+    public int getSexo() {
         return sexo;
     }
-    public void setSexo(boolean sexo) {
+    public void setSexo(int sexo) {
         this.sexo = sexo;
     }
     public String getTelefoneUser() {
@@ -52,10 +52,10 @@ public class Usuario {
     public void setDataNascimento(Calendar dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
-    public String getRedeSocial() {
+    public int getRedeSocial() {
         return redeSocial;
     }
-    public void setRedeSocial(String redeSocial) {
+    public void setRedeSocial(int redeSocial) {
         this.redeSocial = redeSocial;
     }
 }
