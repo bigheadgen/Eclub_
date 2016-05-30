@@ -26,7 +26,7 @@ public class EnderecoDAO {
             stmt.setString(4, endereco.getEstado());
             stmt.setInt(5, endereco.getNumero());
             stmt.setString(6, endereco.getLatitude());
-            stmt.setString(7, endereco.getLongetude());
+            stmt.setString(7, endereco.getLongitude());
             
             stmt.executeQuery();
             stmt.close();
@@ -42,7 +42,7 @@ public class EnderecoDAO {
         try {
             PreparedStatement stmt = conLocal.prepareStatement(sql);
             stmt.setString(1, endereco.getLatitude());
-            stmt.setString(2, endereco.getLongetude());
+            stmt.setString(2, endereco.getLongitude());
             
             stmt.executeQuery();
             stmt.close();
@@ -61,7 +61,7 @@ public class EnderecoDAO {
         try {
             PreparedStatement stmt = conLocal.prepareStatement(sql);
             stmt.setString(1, endereco.getLatitude());
-            stmt.setString(2, endereco.getLongetude());
+            stmt.setString(2, endereco.getLongitude());
             ResultSet rs = stmt.executeQuery();
             while(rs.next()){
 
@@ -71,7 +71,7 @@ public class EnderecoDAO {
                 end.setRua(rs.getString("rua"));
                 end.setNumero(rs.getInt("numero"));
                 end.setLatitude(rs.getString("latitude"));
-                end.setLongetude(rs.getString("longetude"));   
+                end.setLongitude(rs.getString("longetude"));   
             }
         } catch (SQLException ex) {
             Logger.getLogger(EnderecoDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -95,7 +95,7 @@ public class EnderecoDAO {
                 end.setRua(rs.getString("rua"));
                 end.setNumero(rs.getInt("numero"));
                 end.setLatitude(rs.getString("latitude"));
-                end.setLongetude(rs.getString("longetude"));   
+                end.setLongitude(rs.getString("longetude"));   
                 enderecos.add(end);
             }
         } catch (SQLException ex) {
@@ -120,39 +120,13 @@ public class EnderecoDAO {
                 end.setRua(rs.getString("rua"));
                 end.setNumero(rs.getInt("numero"));
                 end.setLatitude(rs.getString("latitude"));
-                end.setLongetude(rs.getString("longetude"));   
+                end.setLongitude(rs.getString("longetude"));   
                 enderecos.add(end);
             }
         } catch (SQLException ex) {
             Logger.getLogger(EnderecoDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
     return enderecos;
-    }
-    public Endereco AlterarEndereco (Endereco aux) throws SQLException{
-        if (buscaEndereco(aux) != null){
-            conLocal = new ConnectionFactory().getConnection();
-            String sql = "UPDATE TABLE endereco SET cidade = ?, rua = ?, estado = ?, numero = ?, latitude = ?,"
-                    + "longitude = ?, bairro = ? WHERE latitude = ? AND longitude = ?;";
-            try{
-                PreparedStatement stmt = conLocal.prepareStatement(sql);
-                stmt.setString(1, aux.getEstado());
-                ResultSet rs = stmt.executeQuery();
-                while (rs.next()){
-                    aux.setBairro(rs.getString("bairro"));
-                    aux.setCidade(rs.getString("cidade"));
-                    aux.setEstado(rs.getString("estado"));
-                    aux.setLatitude(rs.getString("latitude"));
-                    aux.setLongetude(rs.getString("longitude"));
-                    aux.setNumero(rs.getInt("numero"));
-                    aux.setRua(rs.getString("rua"));
-                } 
-            }catch (SQLException ex){
-                    Logger.getLogger(EnderecoDAO.class.getName()).log(Level.SEVERE, null, ex);    
-            }
-            return aux;    
-        } else {
-            return null;
-        }
     }
     public List<Endereco> ListarEnderecosBairro(String bairro){
         List<Endereco> enderecos = new ArrayList<>();
@@ -171,12 +145,31 @@ public class EnderecoDAO {
                 end.setRua(rs.getString("rua"));
                 end.setNumero(rs.getInt("numero"));
                 end.setLatitude(rs.getString("latitude"));
-                end.setLongetude(rs.getString("longetude"));   
+                end.setLongitude(rs.getString("longetude"));   
                 enderecos.add(end);
             }
         } catch (SQLException ex) {
             Logger.getLogger(EnderecoDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
     return enderecos;
+    }
+    public void AlterarEndereco (Endereco endereco) throws SQLException{
+            //a validaçã0o dos campos de endereco para saber o que mudou deve ficar no controller
+            conLocal = new ConnectionFactory().getConnection();
+            String sql = "UPDATE TABLE endereco SET cidade = ?, rua = ?, estado = ?, numero = ?, latitude = ?,"
+                    + "longitude = ?, bairro = ? WHERE latitude = ? AND longitude = ?;";
+            PreparedStatement stmt = conLocal.prepareStatement(sql);
+            stmt.setString(1, endereco.getCidade());
+            stmt.setString(2, endereco.getRua());
+            stmt.setString(3, endereco.getEstado());
+            stmt.setInt(4, endereco.getNumero());
+            stmt.setString(5, endereco.getLatitude());
+            stmt.setString(6, endereco.getLongitude());
+            stmt.setString(7, endereco.getBairro());
+            stmt.setString(8, endereco.getLatitude());
+            stmt.setString(9, endereco.getLongitude());
+            stmt.executeQuery();
+            stmt.close();
+            conLocal.close();
     }
 }

@@ -9,12 +9,12 @@ public class Endereco {
     private String rua;
     private int numero;
     private String latitude;
-    private String longetude;
+    private String longitude;
             
     //construtor, a latitude e longetude sao obrigatorios 
-    public Endereco(String latitude, String longetude){
+    public Endereco(String latitude, String longitude){
         this.latitude = latitude;
-        this.longetude = longetude;
+        this.longitude = longitude;
     }
     public Endereco() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -56,10 +56,10 @@ public class Endereco {
     public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
-    public String getLongetude() {
-        return longetude;
+    public String getLongitude() {
+        return longitude;
     }
-    public void setLongetude(String longetude) {
-        this.longetude = longetude;
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
     }
 }
