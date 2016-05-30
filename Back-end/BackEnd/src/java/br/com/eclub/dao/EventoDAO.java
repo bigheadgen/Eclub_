@@ -16,8 +16,7 @@ public class EventoDAO {
     private Connection conLocal;
 
     public EventoDAO() {
-        ConnectionFactory con = new ConnectionFactory();
-        conLocal = con.getConnection();
+        conLocal = new ConnectionFactory().getConnection();
     }
     public void inserirEvento(Evento evento) throws SQLException {
         Evento e = new Evento();
