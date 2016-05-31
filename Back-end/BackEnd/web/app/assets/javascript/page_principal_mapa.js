@@ -5,7 +5,7 @@ var cidades = ["recife", "olinda",
 
 function myLogin(){
 
-	window.location = 'homepage.html';
+	window.location = 'login.html';
 
 }
 function validarCidades(valor_busca){
