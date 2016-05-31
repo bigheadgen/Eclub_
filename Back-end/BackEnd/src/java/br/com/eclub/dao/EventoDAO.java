@@ -1,4 +1,5 @@
 package br.com.eclub.dao;
+
 import br.com.eclub.modelo.Endereco;
 import br.com.eclub.modelo.Evento;
 import java.sql.Connection;
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 //@author Gustavo, Thierry Freire
+
 public class EventoDAO {
 
     private Connection conLocal;
@@ -18,6 +20,7 @@ public class EventoDAO {
     public EventoDAO() {
         conLocal = new ConnectionFactory().getConnection();
     }
+
     public boolean inserirEvento(Evento evento) throws SQLException {
         Evento e = new Evento();
         Endereco end = new Endereco(null, null);
@@ -37,7 +40,7 @@ public class EventoDAO {
             stmt.setInt(8, evento.getIdEvento());
             stmt.setString(9, evento.getDivulgador().getCnpj());
             stmt.setString(10, evento.getDivulgador().getNomeDivulgador());
-          
+
             stmt.executeQuery();
 
         } catch (SQLException ex) {
@@ -46,6 +49,7 @@ public class EventoDAO {
         conLocal.close();
         return true;
     }
+
     public boolean excluirEvento(Evento evento) throws SQLException {
 
         String sql = "DELETE from evento where id_evento = ?";
@@ -60,6 +64,7 @@ public class EventoDAO {
             return false;
         }
     }
+
     public Evento pesquisarEvento(String cidade) throws SQLException {
 
         Evento eve = new Evento();
@@ -91,8 +96,9 @@ public class EventoDAO {
             return null;
         }
     }
+
     public List<Evento> listarEventos(Endereco endereco) throws SQLException {
-        
+
         //falar com andre para ele criar o codigo sql para o select no banco 
         //para trazer todos os eventos a partir de um  local 
         String sql = "SELECT * FROM Evento E, Endereco D WHERE E.id_Endereco = ? AND D.cidade = ?;";
@@ -100,11 +106,11 @@ public class EventoDAO {
         PreparedStatement stmt = conLocal.prepareStatement(sql);
         stmt.setString(1, endereco.getCidade());
         ResultSet rs = stmt.executeQuery();
-        
+
         List<Evento> eventos = new ArrayList<>();
-        while (rs.next()){
+        while (rs.next()) {
             Evento ev = new Evento();
-            
+
             ev.setNomeEvento(rs.getString("nome_Evento"));
             ev.setTipoEvento(rs.getString("tipo_Evento"));
             ev.setValorEntrada(rs.getDouble("valorEntrada"));
@@ -116,13 +122,11 @@ public class EventoDAO {
             ev.setQntHomens(rs.getInt("qntHomem"));
             ev.setQntmulheres(rs.getInt("qntMulher"));
             ev.setDescricaoEvento(rs.getString("descricaoEvento"));
-            
+
             // falta adicionar ao evento o endereco e o divulgador
-            
             //apos o evento estar completo deve ser adicionado a lista de eventos
             eventos.add(ev);
-        }     
+        }
         return eventos;
     }
 }
-
