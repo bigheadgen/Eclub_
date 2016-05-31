@@ -13,7 +13,7 @@ function validarCidades(valor_busca){
 		
 		if(valor_busca == cidades[i]){
 				
-			window.location = 'page_principal_mapa.html';
+			window.location = 'page_principal_mapa.html?local=' + valor_busca;
 			return true;
 		}
 	}
