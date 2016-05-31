@@ -1,8 +1,11 @@
 package br.com.eclub.controller;
 
+import br.com.eclub.dao.DivulgadorDAO;
+import br.com.eclub.dao.EnderecoDAO;
 import br.com.eclub.dao.EventoDAO;
 import br.com.eclub.modelo.Endereco;
 import br.com.eclub.modelo.Evento;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
@@ -14,7 +17,28 @@ import java.util.logging.Logger;
  */
 //@author Gustavo
 public class EventoController {
-    public EventoController(){
+    private EventoDAO eveDao;
+    private EnderecoDAO endDao;
+    private DivulgadorDAO divuDao;
+    public static Connection comSQL;
+
+    public EventoController() {
+        this.eveDao = new EventoDAO();
+        this.endDao = new EnderecoDAO();
+        this.divuDao = new DivulgadorDAO();
+    }
+     public boolean inserirEvento(Evento objEvento) {
+        try {
+            if (this.eveDao.inserirEvento(objEvento)) {
+                comSQL.commit();
+                return true;
+            } else {
+                comSQL.rollback();
+                return false;
+            }
+        } catch (SQLException e) {
+            return false;
+        }
     }
     public List<Evento> ListarEventos(String local) throws SQLException {
         List<Evento> todosEventos;

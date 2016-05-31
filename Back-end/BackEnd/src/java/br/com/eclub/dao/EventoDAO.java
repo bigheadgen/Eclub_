@@ -18,7 +18,7 @@ public class EventoDAO {
     public EventoDAO() {
         conLocal = new ConnectionFactory().getConnection();
     }
-    public void inserirEvento(Evento evento) throws SQLException {
+    public boolean inserirEvento(Evento evento) throws SQLException {
         Evento e = new Evento();
         Endereco end = new Endereco(null, null);
         e = evento;
@@ -44,6 +44,7 @@ public class EventoDAO {
             Logger.getLogger(EventoDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         conLocal.close();
+        return true;
     }
     public boolean excluirEvento(Evento evento) throws SQLException {
 
