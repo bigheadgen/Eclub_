@@ -6,8 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 //@author Thierry Freire
 public class UsuarioDAO {
     
@@ -57,7 +55,7 @@ public class UsuarioDAO {
         }
     }
     //Método de Cadastrar usuário
-    public Usuario CadastrarUsuario (Usuario usuario){
+    public void CadastrarUsuario (Usuario usuario){
         String sql ="INSERT INTO Usuario(nomeUsuario, sexo, dataNascimento, EmailUsuario, telefoneUsuario, idRedeSocial)"
                 + "VALUES(?,?,?,?,?,?)";
            conLocal = new ConnectionFactory().getConnection();
@@ -74,7 +72,6 @@ public class UsuarioDAO {
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
         }
-        return usuario;
     }
     //Método para alterar dados do usuário
     public void AlterarUsuario (Usuario usuario) throws SQLException{
