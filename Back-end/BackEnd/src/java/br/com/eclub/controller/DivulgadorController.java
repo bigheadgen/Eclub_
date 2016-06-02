@@ -1,10 +1,21 @@
 package br.com.eclub.controller;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-//@author Gustavo
+//@author Gustavo, Thierry
+
+import br.com.eclub.dao.DivulgadorDAO;
+import br.com.eclub.modelo.Divulgador;
+
 public class DivulgadorController {
-  public DivulgadorController(){}  
+    private DivulgadorDAO divulgadorDAO;
+    public DivulgadorController(){
+        this.divulgadorDAO = new DivulgadorDAO();
+    }
+    public void CadastrarDivulgador (Divulgador divulgador){
+        try{
+            if (divulgadorDAO.BuscarDivulgador(divulgador) != null){
+                divulgadorDAO.CadastrarDivulgador(divulgador);
+            }
+        } catch (Exception e){
+            throw new RuntimeException(e);
+        }
+    }
 }
