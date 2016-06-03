@@ -138,3 +138,18 @@ footer{
 		font-size: 20px;
 		font-family: 'Raleway', sans-serif;
 	}
+
+	@media screen and (min-width: 600px) and (max-width: 700px) {	
+	#links_redes_sociais ul{
+		margin: 0px 0px 0px -89px;
+		width: 114%;
+
+	}
+	cite{
+		margin-left: 38%;
+		color: white;
+		font-size: 20px;
+		font-family: 'Raleway', sans-serif;
+	}
+
+		}
