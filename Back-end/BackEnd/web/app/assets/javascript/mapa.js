@@ -73,9 +73,9 @@ function queryString(parameter) {
                   return false;   
               }   
         }
-var variavel = queryString("local");
+
 function getCidade(){
- 
+ var variavel = queryString("local");
   variavel = variavel.toLowerCase();
   for (var i = 0; i < locais.length; i++) {
     if(variavel == locais[i].name.toLowerCase()){
@@ -85,10 +85,10 @@ function getCidade(){
 }
 function initMap() {
   var cidade;
-  if(variavel == false){
+  if(queryString("local") == false){
     cidade = p1;
   }else{
-    cidade = getCidade;
+    cidade = getCidade();
   }
     var mapOptions = {
     zoom: cidade.zoom,
