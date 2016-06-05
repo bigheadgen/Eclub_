@@ -56,7 +56,7 @@ function initMap() {
     zoom: cidade.zoom,
     center: {lat: cidade.lat, lng:cidade.long},
     disableDefaultUI: true
-  }
+  };
   var map = new google.maps.Map(document.getElementById("map"),
        mapOptions);
   addEventos(eventos,queryString("local"),map);
@@ -65,92 +65,111 @@ var p1 = {
   name: "recife",
   lat: -8.0518067, 
   long:-34.9101193,
-  zoom: 13,
-};
-var p2 = { 
-  name: "olinda", 
-  lat: -7.9872432,
-  long:-34.853892,
-  zoom: 13
+  zoom: 14
 };
 var p2 = { 
   name: "jaboatao", 
-  lat: -8.1725308,
-  long:-34.9656504,
+  lat: -8.1885582,
+  long:-34.9504721,
   zoom: 14
 };
 var p3 = { 
-  name: "caruaru", 
-  lat: -8.2850489,
-  long:-35.9664043,
-  zoom:14
-};
-var p4 = { 
-  name: "petrolina", 
-  lat: -9.3810223,
-  long:-40.5250625,
-  zoom: 14
-};
-var p5 = { 
   name: "cabo", 
   lat: -8.2981555,
   long:-35.065986,
-  zoom: 13
-};
-var p6 = { 
-  name: "camaragibe", 
-  lat: -8.0078622,
-  long:-34.9972643,
   zoom: 14
 };
-var p7 = { 
-  name: "garanhuns", 
-  lat: -8.8831071,
-  long:-36.4965562,
-  zoom: 14
-};
-var p8 = { 
-  name: "vitoria", 
-  lat: -8.1168932,
-  long:-35.3067268,
-  zoom: 14
-};
-var locais = new Array(p1, p2, p3, p4, p5, p6, p7, p8);
-//eventos
+var locais = new Array(p1, p2, p3);
+//eventos em recife
 var ev1 ={
   cidade:"recife",
+  nom: "Boteco",
   descricao: "Nosso evento de teste1",
-  lat: -8.063696,
-  long: -34.8709444
+  lat: -8.065735,
+  long: -34.8728405
 };
 var ev2 ={
   cidade:"recife",
+  nom: "DownTown Pub",
   descricao: "Nosso evento de teste2",
-  lat: -8.0607854,
-  long: -34.8788971
+  lat: -8.0640424,
+  long: -34.8725146
 };
 var ev3 ={
   cidade:"recife",
+  nom: "Rouge Club",
   descricao: "Nosso evento de teste3",
-  lat: -8.0436238,
-  long: -34.8665268
+  lat: -8.0644187,
+  long: -34.8843229
 };
 var ev4 ={
-  cidade:"vitoria",
-  descricao: "Nosso evento de teste2",
-  lat: -8.1165094,
-  long: -35.2985695
+  cidade:"recife",
+  nom: "Profana Pub",
+  descricao: "Nosso evento de teste4",
+  lat: -8.0642381,
+  long: -34.8726629
 };
 var ev5 ={
-  cidade:"vitoria",
-  descricao: "Nosso evento de teste3",
-  lat: -8.1082988,
-  long: -35.2975834
+  cidade:"jaboatao",
+  nom: "O Puxadinho",
+  descricao: "Nosso evento de teste5",
+  lat: -8.1628837,
+  long: -34.9168949
 };
 var ev6 ={
-  cidade:"recife",
-  descricao: "Nosso evento de teste2",
-  lat: -8.0955762,
-  long: -34.8840217
+  cidade:"jaboatao",
+  nom: "ZEN Comida Japonesa",
+  descricao: "Nosso evento de teste6",
+  lat: -8.1603233,
+  long: -34.9141522
 };
-var eventos = new Array(ev1, ev2, ev3, ev4, ev5,ev6);
+var ev7 ={
+  cidade:"jaboatao",
+  nom: "Restaurante e Pizzaria Atlântico",
+  descricao: "Nosso evento de teste7",
+  lat: -8.1608764,
+  long: -34.9137035
+};
+var ev8 ={
+  cidade:"jaboatao",
+  nom: "O Jabá",
+  descricao: "Nosso evento de teste8",
+  lat: -8.1623286,
+  long: -34.9133276
+};
+var ev9 ={
+  cidade:"jaboatao",
+  nom: "MPBar",
+  descricao: "Nosso evento de teste9",
+  lat: -8.1628523,
+  long: -34.9128659
+};
+var ev10 ={
+  cidade:"jaboatao",
+  nom: "Connect Club",
+  descricao: "Nosso evento de teste10",
+  lat: -8.2155692,
+  long: -34.930016
+};
+var ev11 ={
+  cidade:"jaboatao",
+  nom: "Anexo Pub",
+  descricao: "Nosso evento de teste11",
+  lat: -8.1794505,
+  long: -34.917899
+};
+var ev12 ={
+  cidade:"jaboatao",
+  nom: "Big House",
+  descricao: "Nosso evento de teste12",
+  lat: -8.1884023,
+  long: -34.9194243
+};
+var ev13 ={
+  cidade:"recife",
+  nom: "Chevrolet Hall",
+  descricao: "Nosso evento de teste13",
+  lat: -8.0342658,
+  long: -34.8712582
+};
+var eventos = new Array(ev1, ev2, ev3, ev4, ev5, ev6, ev7, ev8, ev9, ev10, ev11, ev12, ev13);
