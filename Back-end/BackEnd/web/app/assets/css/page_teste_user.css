@@ -1,0 +1,74 @@
+*{
+	margin: 0;
+	padding: 0;
+	height:100%;
+}
+
+header{
+		width: 100%;
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.61);
+		min-height:10%;
+		}
+	 #menu_usuario{
+		width: 75%;
+		height: 40px;
+		padding-top: 5px;
+		margin-left: 5%;
+		margin-right: 0%;
+		}
+	ul #eclub_small{
+		margin-right: 7%;
+		font-size: 25px;
+
+	}
+	li{
+		width: 75px;
+		height: 75px;
+		display: inline;
+		margin-right: 4%;
+	}
+
+	#menu_usuario  li a {
+		width: 70px;
+		height: 70px;
+		margin-right:13px;
+		text-decoration: none;
+		text-align: center;
+		font-family: 'Raleway', sans-serif;
+		font-style: italic;
+		font-size: 18px;
+		color:aliceblue;
+	}
+h1{
+	display: inline-block;
+	font-size: 40px;
+}
+figure{
+width: 60px;
+height: 50px;
+margin-top: -3%;
+margin-right: 11%;
+display: inline-flex;
+float: right;
+}
+
+select{
+	width: 24px;
+	height: 30px;
+	float: right;
+	margin-top: 15%;
+	background-color: transparent;
+	outline: none;
+	border-color: transparent;
+	color: aliceblue;
+}	
+#alterar_foto_user, #logout_user{
+background-color: transparent;
+color: black;
+text-align: center;
+font-family: 'Raleway', sans-serif;
+font-style: italic;
+font-size: 14px;
+}
+
