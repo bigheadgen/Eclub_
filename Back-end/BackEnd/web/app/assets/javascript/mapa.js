@@ -31,6 +31,7 @@ function addMarker(location, map) {
   var myLatlng = new google.maps.LatLng(location.lat, location.long);
   var marker = new google.maps.Marker({
     position: myLatlng,
+    animation: google.maps.Animation.DROP,
     title: location.descricao
 });
 marker.setMap(map);
@@ -58,7 +59,7 @@ function initMap() {
   }
   var map = new google.maps.Map(document.getElementById("map"),
        mapOptions);
-  //falta finalizar 
+  addEventos(eventos,queryString("local"),map);
 }
 var p1 = {
   name: "recife",
@@ -134,4 +135,22 @@ var ev3 ={
   lat: -8.0436238,
   long: -34.8665268
 };
-var eventos = new Array(ev1, ev2, ev3);
+var ev4 ={
+  cidade:"vitoria",
+  descricao: "Nosso evento de teste2",
+  lat: -8.1165094,
+  long: -35.2985695
+};
+var ev5 ={
+  cidade:"vitoria",
+  descricao: "Nosso evento de teste3",
+  lat: -8.1082988,
+  long: -35.2975834
+};
+var ev6 ={
+  cidade:"recife",
+  descricao: "Nosso evento de teste2",
+  lat: -8.0955762,
+  long: -34.8840217
+};
+var eventos = new Array(ev1, ev2, ev3, ev4, ev5,ev6);
