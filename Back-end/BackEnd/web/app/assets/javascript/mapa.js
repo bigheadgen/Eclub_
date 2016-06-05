@@ -19,7 +19,6 @@ function queryString(parameter) {
                   return false;   
               }   
         }
-
 function  addEventos(eventos,city,map){
   for (var i = 0; i < eventos.length; i++) {
       if(eventos[i].cidade == city){
@@ -29,11 +28,22 @@ function  addEventos(eventos,city,map){
 }
 function addMarker(location, map) {
   var myLatlng = new google.maps.LatLng(location.lat, location.long);
+    //aqui é o texto da janela do evento
+    var contentString = location.descricao;
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
   var marker = new google.maps.Marker({
     position: myLatlng,
     animation: google.maps.Animation.DROP,
     title: location.descricao
 });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+
 marker.setMap(map);
 }
 function getCidade(){
