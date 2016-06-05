@@ -4,36 +4,35 @@
 	<title>Eclub</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="../assets/css/page_user.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/page_teste_user.css">
 	<script type="text/javascript" src="../assets/javascript/page_user.js"></script>
 	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<body background="../assets/images/balada_.jpg">
 		<header>
-			<menu id="menu_usuario">
-	        <ul>
-	        	<li id="eclub_small">
-	            <a href="../views/page_principal_mapa.html">
-	            <H1>Eclub</H1>
+	            <a href="../views/page_principal_mapa.html" id="eclub_small">
+	            <H1 >Eclub</H1>
 	            </a>
+				<menu>
+	        	<ul class="menu">
+	          	<li>
+	            <a href="#">Meu Perfil</a>
+	            <ul class="submenu-1">
+        		<li>
+        		<form id="form_perfil_user" action="page_teste_user.js">
+          		<input type="text" id="form_name" placeholder="Nome" autofocus=""></input>
+          		<br>
+          		<input type="number" id="form_number" placeholder="Idade" name="quantity"  min="18" max="50"></input>
+          		<br>
+          		<input type="email" id="form_email" placeholder="Seu email" autofocus=""></input>
+          		<br>
+  				</form>
+          		</li>
+          		</ul>
 	          </li>
-	          <li>
-	            <a href="#">Meu perfil</a>
-	          </li>
-	          <li>
-	            <a href="#">Agenda de eventos</a>
-	          </li>
-	          <li>
-	            <a href="#">Amigos</a>
-	          </li>
-	          <li>
-	            <a href="#">Preferências</a>
-	          </li>
-	          <li>
-	            <a href="#">Contas associadas</a>
-	          </li>      
-	        </ul>  
+	          </ul>  
 	       	</menu>
+	       	<!--
 	       	<figure>
 	       	<img src="../assets/images/mulher.jpg">
 	       	<select>
@@ -42,6 +41,7 @@
  			 <option value="logout" id="logout_user" id="alterar_foto_user">Logout</option>
 			</select>
 			</figure>
+			-->
 		</header>
 	</body>
 </html>

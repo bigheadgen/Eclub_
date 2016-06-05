@@ -10,18 +10,132 @@ header{
 		background-color: rgba(0, 0, 0, 0.61);
 		min-height:10%;
 		}
-	 #menu_usuario{
+a#eclub_small{
+		height: 40px;
+		float: left;
+		margin-left: 5%;
+		margin-right: 6%;
+		margin-top: 7px;
+		color: aliceblue;
+		background-color: transparent;
+}
+a#eclub_small h1{
+	display: inline-block;
+	font-size: 40px;
+	font-family: 'Raleway', sans-serif;
+	font-style: italic;
+	}
+
+	menu{
+		width: 70%;
+		height: 40px;
+		float: left;
+	}
+
+ ul.menu{
+  padding-top: 25px;
+  margin-right: 0%;
+}
+ul.menu li{
+display: inline;
+margin-right: 5%;
+list-style:none; 
+text-decoration:none;
+float: left;
+position: relative;
+background-color: transparent;
+}
+
+menu li a{
+  width: 115px;
+  height: 50px;
+  text-align: center;
+  float: left;
+  transition: all .01s linear;
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  color:aliceblue;
+  list-style: none;
+  text-decoration: none;
+  background-color: transparent;
+}
+ul .submenu-1{
+  width: 400%;
+  height: 400%;
+  background-color: #C0C0C0;
+  opacity: 0.8;
+  position: absolute;
+  border-radius: 10px 10px 10px 10px;
+  border-color: black;
+}
+
+ul.menu ul{ 
+ display:none; 
+}
+
+/* Configurações nivel 2*/
+.menu li:hover > ul.submenu-1{ 
+  width: 400%;
+  height: 500%;
+  display:block; 
+  top:50px; 
+  left:0;
+  padding:5px; 
+  border-radius:10px 10px 10px 10px; 
+}
+
+#form_perfil_user{
+	width: inherit;
+	height: inherit;
+	display: table-footer-group;
+}
+input{
+	width: 250px;
+	height: 25px;
+	border-radius: 5px 5px 5px 5px;
+	outline: none;
+	text-align: center;
+}
+#form_name{
+	margin: 10% 5% 5% 10%;
+}
+#form_number{
+margin: 0% 5% 5% 10%;
+}
+#form_email{
+margin: 0% 5% 5% 10%;	
+}
+#form_salvar{
+
+}
+
+
+
+
+
+
+/*Configurações de cores
+.menu li:hover > a{ 
+background:;  
+color:;
+}
+/*Configuração do menu hover*/
+/*nivel 2*
+.submenu-1 a{
+  color:#fff;
+}
+.submenu-1 li:hover > a{ 
+  background:#666;
+}
+
+ #menu_usuario{
 		width: 75%;
 		height: 40px;
 		padding-top: 5px;
 		margin-left: 5%;
 		margin-right: 0%;
 		}
-	ul #eclub_small{
-		margin-right: 7%;
-		font-size: 25px;
-
-	}
 	li{
 		width: 75px;
 		height: 75px;
@@ -30,7 +144,7 @@ header{
 	}
 
 	#menu_usuario  li a {
-		width: 70px;
+		width: 70px; 
 		height: 70px;
 		margin-right:13px;
 		text-decoration: none;
@@ -40,10 +154,6 @@ header{
 		font-size: 18px;
 		color:aliceblue;
 	}
-h1{
-	display: inline-block;
-	font-size: 40px;
-}
 figure{
 width: 60px;
 height: 50px;
@@ -72,3 +182,4 @@ font-style: italic;
 font-size: 14px;
 }
 
+*/
