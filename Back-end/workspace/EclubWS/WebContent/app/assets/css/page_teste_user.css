@@ -70,13 +70,31 @@ ul .submenu-1{
   border-color: black;
 }
 
+ul .submenu-2{
+  width: 400%;
+  height: 400%;
+  background-color: #C0C0C0;
+  opacity: 0.8;
+  position: absolute;
+  border-radius: 10px 10px 10px 10px;
+  border-color: black;
+}
 ul.menu ul{ 
  display:none; 
 }
 
 /* Configurações nivel 2*/
 .menu li:hover > ul.submenu-1{ 
-  width: 300%;
+  width: 200%;
+  height: 600%;
+  display:block; 
+  top:50px; 
+  left:0;
+  padding:5px; 
+  border-radius:10px 10px 10px 10px; 
+}
+.menu li:hover > ul.submenu-2{ 
+  width: 186%;
   height: 600%;
   display:block; 
   top:50px; 
