@@ -1,0 +1,134 @@
+/**
+ * 
+ */
+package br.com.solar.resource;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.GenericEntity;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import br.com.solar.model.Curso;
+import br.com.solar.model.Horario;
+import br.com.solar.model.Turma;
+
+/**
+ * @author Endrigo
+ *
+ */
+@Path("/cursos")
+public class CursoResource {
+
+	/**
+	 * 
+	 */
+	public CursoResource() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@GET
+	@Path("/getCursos")
+	@Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+	public ArrayList<Curso> getCursos() {
+		ArrayList<Curso> cursos = new ArrayList<Curso>();
+		cursos.add(new Curso(1, "cco"));
+		cursos.add(new Curso(2, "si"));
+		cursos.add(new Curso(3, "gti"));
+		cursos.add(new Curso(4, "redes"));
+		cursos.add(new Curso(5, "direito"));
+		return cursos;
+	}
+
+	@GET
+	@Path("/getCursosId")
+	@Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+	public Response getCursoId(@QueryParam("parametro") String parametro) {
+		List<Curso> cursos = new ArrayList();
+		GenericEntity<List<Curso>> entity = new GenericEntity<List<Curso>>(cursos) {
+		};
+
+		if (parametro.equals("1")) {
+			cursos.add(new Curso(1, "cco"));
+		} else {
+			cursos.add(new Curso(1, "cco"));
+			cursos.add(new Curso(2, "si"));
+			cursos.add(new Curso(3, "gti"));
+			cursos.add(new Curso(4, "redes"));
+		}
+		return Response.ok(entity).build();
+	}
+	
+	@GET
+	@Path("/getTurmas")
+	@Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+	public Response getTurmas(@QueryParam("idCurso") String idCurso) {
+		List<Turma> turmas = new ArrayList();
+		GenericEntity<List<Turma>> entity = new GenericEntity<List<Turma>>(turmas) {
+		};
+		
+		System.out.println(idCurso);
+		
+		switch (Integer.parseInt(idCurso)) {
+		case 1:
+			turmas.add(new Turma(1, "1MA"));
+			turmas.add(new Turma(2, "1NA"));
+			turmas.add(new Turma(3, "2MA"));
+			turmas.add(new Turma(4, "2NA"));
+			turmas.add(new Turma(5, "3MA"));
+			turmas.add(new Turma(6, "3NA"));
+			turmas.add(new Turma(7, "4MA"));
+			turmas.add(new Turma(8, "4NA"));
+			break;
+		case 2:
+			turmas.add(new Turma(9, "1NA"));
+			turmas.add(new Turma(10, "3NA"));
+			turmas.add(new Turma(11, "5NA"));
+		default:
+			break;
+		}
+		return Response.ok(entity).build();
+	}
+	
+	@GET
+	@Path("/getHorario")
+	@Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+	public Response getHorario(@QueryParam("idTurma") String idTurma) {
+		List<Horario> horario = new ArrayList();
+		GenericEntity<List<Horario>> entity = new GenericEntity<List<Horario>>(horario) {
+		};
+		
+		switch (Integer.parseInt(idTurma)) {
+		case 1:
+			horario.add(new Horario(1, "Sala : D-240", "13/08/2015", 0, ""));
+			horario.add(new Horario(1, "Sala : Lab-8", "14/08/2015", 1, "Professor esta doente"));
+			horario.add(new Horario(1, "Sala : D-240", "17/08/2015", 0, ""));
+			break;
+		case 2:
+		default:
+			break;
+		}
+		return Response.ok(entity).build();
+	}
+	
+	
+	
+	
+	@GET
+	@Path("/isLoginValido")
+	@Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+	public String isLoginValido(@QueryParam("username") String username, @QueryParam("password") String password) {
+		if ((username.equals("End") && password.equals("123")) ||
+		    (username.equals("Ted") && password.equals("123")))
+		{
+			return "0";
+		}
+		return "1";
+	}
+
+}

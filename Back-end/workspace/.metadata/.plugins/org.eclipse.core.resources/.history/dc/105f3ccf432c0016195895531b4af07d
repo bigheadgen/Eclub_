@@ -1,0 +1,74 @@
+/**
+ * 
+ */
+package br.com.solar.model;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+/**
+ * @author Endrigo
+ *
+ */
+@XmlRootElement
+public class Horario {
+	private Integer id;
+	private String sala;
+	private String dataAula;
+	private Integer isAulaConfirmada;
+	private String motivoCancelamentoAula;
+
+	public Horario() {
+	}
+
+	public Horario(Integer id, String sala, String dataAula, Integer isAulaConfirmada, String motivoCancelamentoAula) {
+		super();
+		this.id = id;
+		this.sala = sala;
+		this.dataAula = dataAula;
+		this.isAulaConfirmada = isAulaConfirmada;
+		this.motivoCancelamentoAula = motivoCancelamentoAula;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getSala() {
+		return sala;
+	}
+
+	public void setSala(String sala) {
+		this.sala = sala;
+	}
+
+	public String getDataAula() {
+		return dataAula;
+	}
+
+	public void setDataAula(String dataAula) {
+		this.dataAula = dataAula;
+	}
+
+	public Integer getIsAulaConfirmada() {
+		return isAulaConfirmada;
+	}
+
+	public void setIsAulaConfirmada(Integer isAulaConfirmada) {
+		this.isAulaConfirmada = isAulaConfirmada;
+	}
+
+	public String getMotivoCancelamentoAula() {
+		return motivoCancelamentoAula;
+	}
+
+	public void setMotivoCancelamentoAula(String motivoCancelamentoAula) {
+		this.motivoCancelamentoAula = motivoCancelamentoAula;
+	}
+	
+	
+	
+}
