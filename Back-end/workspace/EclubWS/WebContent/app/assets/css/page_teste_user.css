@@ -1,0 +1,195 @@
+*{
+	margin: 0;
+	padding: 0;
+	height:100%;
+}
+
+header{
+		width: 100%;
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.61);
+		min-height:10%;
+		}
+a#eclub_small{
+		height: 40px;
+		float: left;
+		margin-left: 5%;
+		margin-right: 6%;
+		margin-top: 7px;
+		color: aliceblue;
+		background-color: transparent;
+}
+a#eclub_small h1{
+	display: inline-block;
+	font-size: 40px;
+	font-family: 'Raleway', sans-serif;
+	font-style: italic;
+	}
+
+	menu{
+		width: 70%;
+		height: 40px;
+		float: left;
+	}
+
+ ul.menu{
+  padding-top: 25px;
+  margin-right: 0%;
+}
+ul.menu li{
+display: inline;
+margin-right: 5%;
+list-style:none; 
+text-decoration:none;
+float: left;
+position: relative;
+background-color: transparent;
+}
+
+menu li a{
+  width: 163px;
+  height: 50px;
+  text-align: center;
+  float: left;
+  transition: all .01s linear;
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  color:aliceblue;
+  list-style: none;
+  text-decoration: none;
+  background-color: transparent;
+}
+ul .submenu-1{
+  width: 400%;
+  height: 400%;
+  background-color: #C0C0C0;
+  opacity: 0.8;
+  position: absolute;
+  border-radius: 10px 10px 10px 10px;
+  border-color: black;
+}
+
+ul.menu ul{ 
+ display:none; 
+}
+
+/* Configurações nivel 2*/
+.menu li:hover > ul.submenu-1{ 
+  width: 300%;
+  height: 600%;
+  display:block; 
+  top:50px; 
+  left:0;
+  padding:5px; 
+  border-radius:10px 10px 10px 10px; 
+}
+
+#form_perfil_user{
+	width: inherit;
+	height: inherit;
+	display: table-footer-group;
+}
+input{
+	width: 250px;
+	height: 25px;
+	border-radius: 5px 5px 5px 5px;
+	outline: none;
+	text-align: center;
+}
+#form_name{
+	margin: 5% 5% 5% 10%;
+}
+#form_number{
+margin: 0% 5% 5% 10%;
+}
+#form_email{
+margin: 0% 5% 5% 10%;	
+}
+
+#form_sexo{
+margin: 1px -108px 5px -70px;
+display: inline;
+}
+#form_sexo2{
+margin: 1px -108px 5px -70px;
+display: inline;
+}
+#form_salvar{
+width:  100px;
+margin: 15px 5px 5px 100px;
+}
+
+
+
+
+
+
+/*Configurações de cores
+.menu li:hover > a{ 
+background:;  
+color:;
+}
+/*Configuração do menu hover*/
+/*nivel 2*
+.submenu-1 a{
+  color:#fff;
+}
+.submenu-1 li:hover > a{ 
+  background:#666;
+}
+
+ #menu_usuario{
+		width: 75%;
+		height: 40px;
+		padding-top: 5px;
+		margin-left: 5%;
+		margin-right: 0%;
+		}
+	li{
+		width: 75px;
+		height: 75px;
+		display: inline;
+		margin-right: 4%;
+	}
+
+	#menu_usuario  li a {
+		width: 70px; 
+		height: 70px;
+		margin-right:13px;
+		text-decoration: none;
+		text-align: center;
+		font-family: 'Raleway', sans-serif;
+		font-style: italic;
+		font-size: 18px;
+		color:aliceblue;
+	}
+figure{
+width: 60px;
+height: 50px;
+margin-top: -3%;
+margin-right: 11%;
+display: inline-flex;
+float: right;
+}
+
+select{
+	width: 24px;
+	height: 30px;
+	float: right;
+	margin-top: 15%;
+	background-color: transparent;
+	outline: none;
+	border-color: transparent;
+	color: aliceblue;
+}	
+#alterar_foto_user, #logout_user{
+background-color: transparent;
+color: black;
+text-align: center;
+font-family: 'Raleway', sans-serif;
+font-style: italic;
+font-size: 14px;
+}
+
+*/

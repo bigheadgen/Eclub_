@@ -1,0 +1,204 @@
+		*{
+			margin: 0;
+			padding: 0;
+			height:92%;
+		}
+		header{
+			width: 100%;
+			height: auto;
+			background-color: rgba(0, 0, 0, 0.61);
+			min-height:10%;
+			}
+
+		div #divulgadores{
+			width: 160px;
+			height: 35px;
+			max-width: 20%;
+			position: absolute;
+			left: 80%;
+			top: 2%;
+			border-radius: 20px;
+			outline: none;
+			background-color: transparent;
+			color: white;
+			font-size: 16px;
+			font-family: 'Raleway', sans-serif;
+		}
+		#grid_1{
+			margin-left: 20%;
+			margin-right: 20%;
+			margin-top: 2%;
+			width: 60%; 
+			height:auto; 
+			min-height:50%;
+		}
+
+		a{
+			text-decoration: none;
+			color: black;
+		}
+		#busca_div{
+			text-align: center;
+			font-size: 1em;
+			border: 3px solid white;
+			background-color: white;
+			box-shadow: 15px 15px 15px rgb(74,73,73);
+			border-radius: 20px;
+			width: 80%;
+			height: 45px;
+			margin-left: 10%;
+			margin-right: 10%;
+			margin-top: 7%;
+			outline: none;
+		}
+
+		#busca{
+			width: 70%;
+			height: 43px;
+			border:none;
+			outline: none;
+			font-size: 20px;
+			text-align: center;
+
+		}
+
+
+		input#buscaimage{
+		height: 40px;
+		width: 40px;
+		margin-bottom: -15px;
+		outline: none;
+		}
+
+		h2{
+			margin-right: 41%;
+			margin-left: 41%;
+			display: inline;
+			font-family: 'Raleway', sans-serif;
+			font-size: 25px;
+			color: #000000;
+
+		}
+		#baixar_aplicativo{
+			margin-left: 30%;
+			margin-right: 20%;	
+
+		}
+
+		#grid_2{
+			margin-left: 20%;
+			margin-right: 20%;
+			width: 60%;
+			height: 250px;
+		}
+
+		#grid_2_2{
+			margin-left: 20%;
+			margin-right: 20%;
+			margin-top: 1%;
+			width: 60%;
+			height: 300px;
+		}
+
+		 #links_redes_sociais{
+			width: 100%;
+			margin-left: 29%;
+			margin-right: 29%;
+			margin-top: 2%;
+			}
+		#links_redes_sociais li, img{
+			width: 75px;
+			height: 75px;
+			display: inline;
+		}
+		#links_redes_sociais a {
+			width: 70px;
+			height: 70px;
+			margin-right:15px;
+			text-decoration: none;
+		}
+	#links_redes_sociais a img{
+		background-color: white;
+		border-radius: 70px;
+	}
+		img#redes_lojas{
+			width: 40%;
+			height: 25%;
+			min-width: 70px;
+			margin-left: 5%;
+			margin-right: 5%;
+			margin-top: 10%;
+			float: left;
+			display: block;
+			
+		}
+
+		hr {
+			height: 0%;
+			width: 90%;
+			margin-left:5%;
+			margin-right:5%;
+			background-color: white solid;
+		}
+
+		h1,h3{
+			text-align: center;
+			font-family: 'Raleway', sans-serif;
+			font-style: italic;
+			font-size: 25px;
+			color:#000;
+		}
+		h1{
+			color:white;
+			font-family: 'Raleway', sans-serif;
+			font-style: italic;
+			font-size: 90px;
+			color:#000;
+
+		}
+
+		footer{
+			width: 100%;
+			height: auto;
+			min-height: 2%;
+			margin-top: 1%;
+		}
+
+		cite{
+			margin-left: 46%;
+			color: white;
+			font-size: 20px;
+			font-family: 'Raleway', sans-serif;
+		}
+
+		@media screen and (min-width: 600px) and (max-width: 700px) {
+		#busca_div{
+			text-align: center;
+			font-size: 1em;
+			border: 3px solid #000;
+			border-radius: 20px;
+			width: 100%;
+			height: 45px;
+			margin-left: 2.5%;
+			margin-right: 2.5%;
+			margin-top: 7%;
+			outline: none;
+			border: 3px solid white;
+			background-color: white;
+			box-shadow: 15px 15px 15px rgb(74,73,73);
+		}
+		#grid_2{
+			margin-left: 6%;
+			margin-right: 10%;
+			margin-top: 5%;
+			width: 60%;
+			height: 300px;
+		}
+
+		h2{
+			margin-right: 0%;
+			margin-left: 55%;
+			display: inline;
+		}
+
+		}
