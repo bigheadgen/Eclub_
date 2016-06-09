@@ -20,4 +20,14 @@ var emailsValidos = ["hotmal.com" , "outlook.com", "gmail.com"];
 	}
 
 }
-
+var divulgador1 ={
+	nome: "",
+	emailDivul: "",
+	senha: ""
+};
+var divulgador2 ={
+	nome: "",
+	emailDivul: "",
+	senha: ""
+};
+var divulgadores = new  Array(divulgador1, divulgador2);
