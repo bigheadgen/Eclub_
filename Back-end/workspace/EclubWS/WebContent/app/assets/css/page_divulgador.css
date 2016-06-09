@@ -10,7 +10,10 @@ header{
 		background-color: rgba(0, 0, 0, 0.61);
 		min-height:10%;
 		}
-	
+	#perfil{
+		background-color: red;
+		display: none;
+	}
 	.widget{
 		width: 10%;
 		margin-right: 10%;
