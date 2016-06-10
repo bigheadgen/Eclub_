@@ -7,21 +7,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../assets/css/page_divulgador.css">
 	<script type="text/javascript" src="../assets/javascript/page_divulgador.js"></script>
-	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<body background="../assets/images/balada_.jpg">
 		<header>
 			<menu id="menu_usuario">
 	        <ul>
 	        	<li id="eclub_small">
-	            <a href="../views/page_principal_mapa.html">
+	            <a href="../views/homepage.html">
 	            <H1>Eclub</H1>
 	            </a>
 	          </li>     
 	        </ul>  
 	       	</menu>
 	       	<figure>
-	       	<img src="../assets/images/divulgadorLogin.png">
+	       	<img id="avatarDivulgador" src="../assets/images/divulgadorLogin.png">
 	       	<select>
 	       	<option value=""></option>
  			 <option value="alterar_foto" id="alterar_foto_user">Alterar foto</option>
@@ -29,26 +28,29 @@
 			</select>
 			</figure>
 		</header>
+		
 		<nav id="widgets">
 			<ul>
+				<div id="perfil_pop" class="hidden">
+					<button type="button" class="btnFechar" onclick="mostra('perfil_pop');">X</button>
+				</div>
 				<li>
-					<!--<div id="perfil"></div>-->
-					<img class="widget" id="meuPerfil" src="../assets/images/divulgadorPerfil.png">
+					<img class="widget" id="meuPerfil" onclick="mostra('perfil_pop');" src="../assets/images/divulgadorPerfil.png">
 				</li>
 				<li>
-					<img  class="widget" id="agendaEventos" src="../assets/images/agendaEventos.png">
+					<img  class="widget" id="agendaEventos" src="#">
 				</li>
 				<li>
-					<img class="widget" src="CadastrarEventos" src="../assets/images/novosEventos.png">
+					<img class="widget" src="CadastrarEventos" src="#">
 				</li>
 				<li>
-					<img class="widget" id="gerenciarEventos" src="../assets/images/gerenciarEventos.png">
+					<img class="widget" id="gerenciarEventos" src="#">
 				</li>
 				<li>
-					<img class="widget" id="VisualizarEventos" src="../assets/images/visualizarEventos.png">
+					<img class="widget" id="VisualizarEventos" src="#">
 				</li>
 				<li>
-					<img class="widget" id="historicoEventos" src="../assets/images/historicoEventos.png">
+					<img class="widget" id="historicoEventos" src="#">
 				</li>
 			</ul>			
 		</nav>
