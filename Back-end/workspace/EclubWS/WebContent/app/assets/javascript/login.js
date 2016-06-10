@@ -3,7 +3,8 @@ function myDivulgadores (){
 	window.location = 'page_login_divulgador.html';
 
 }
-function statusChangeCallback(response) {
+// This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
     // The response object is returned with a status field that lets the
@@ -36,7 +37,7 @@ function statusChangeCallback(response) {
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '1169112996452644',
+    appId      : '1176164205747523',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
