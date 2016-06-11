@@ -30,9 +30,10 @@
 		</header>
 		<nav id="widgets">
 			<ul>
+					<!--pop up do meu perfil-->
 					<div id="perfil_pop" class="hidden">
-					<header id="menuPerfil_popH">
-						<h3>Meu Perfil</h3>
+					<header class="menu_popH">
+						<h3 id="meuPerifh3">Meu Perfil</h3>
 						<button type="button" class="btnFechar" onclick="mostra('perfil_pop');">X</button></header>
 						<section id="grid_1">
 							<input type="text" name="Nome" id="camposNome" class="composInput" placeholder="Nome" autofocus="">
@@ -40,13 +41,30 @@
 							<input type="text" name="Telefone" id="camposTele" class="composInput" placeholder="Telefone">
 							<button type="button" onclick="mostra('perfil_pop');" id="btnSalvar">Salvar</button>
 						</section>
-				</div>
-				<div id="agendaEventos_pop" class="hidden">
-					<button type="button" class="btnFechar" onclick="mostra('agendaEventos_pop');">X</button>
-				</div>
-				<div id="cadastrarEventos_pop" class="hidden">
-					<button type="button" class="btnFechar" onclick="mostra('cadastrarEventos_pop');">X</button>
-				</div>
+					</div>
+					<!--pop up do cadastro de eventos-->
+					<div id="cadastrarEventos_pop" class="hidden">
+					<header class="menu_popH">
+						<h3 id="cadasEventoh3">Cadastrar Evento</h3>
+						<button type="button" class="btnFechar" onclick="mostra('cadastrarEventos_pop');">X</button></header>
+						<section id="grid_1_CadastrarEvento">
+							<input type="text" name="nomeDoEvento" id="nomeDoEvento" class="composInputCadastrarEvento" placeholder="Nome do Evento" autofocus="">
+							<input type="text" name="tipoDoEvento" id="tipoDoEvento" class="composInputCadastrarEvento" placeholder="Tipo do Evento">
+							<input type="text" name="LocalEvento" id="LocalEvento" class="composInputCadastrarEvento" placeholder="Local do Evento">
+							<input type="text" name="cep" id="cep" class="composInputCadastrarEvento" placeholder="CEP">
+							<input type="text" name="Data" id="data" class="composInputCadastrarEvento" placeholder="Data">
+							<input type="text" name="hora" id="horas" class="composInputCadastrarEvento" placeholder="Hora">
+							<input type="text" name="emailDivulgador" id="emailDivulgador" class="composInputCadastrarEvento" placeholder="Email do Divulgador">
+							<input type="text" name="telefone" id="telefoneDivulgador" class="composInputCadastrarEvento" placeholder="Telefone do Divulgador">
+
+							<button type="button" onclick="mostra('cadastrarEventos_pop');" id="btnSalvar">Salvar</button>
+						</section>
+						<section id="grid_2_CadastrarEvento">
+							<input type="text" name="descricaoEvento" id="descricaoEvento" class="composInputCadastrarEvento" placeholder="Descrição do Evento">
+						</section>
+					</div>
+
+				<!--lista com as imagens-->
 				<li>
 					<img class="widget" id="meuPerfil" onclick="mostra('perfil_pop');" src="../assets/images/divulgadorPerfil.png">
 				</li>

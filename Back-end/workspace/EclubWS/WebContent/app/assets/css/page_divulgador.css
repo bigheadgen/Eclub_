@@ -40,6 +40,18 @@ header{
 		z-index: 0;
 		display: inline;
 	}
+	.composInputCadastrarEvento{
+		width: 90%;
+		height: 20px;
+		margin-top: 2%;
+		margin-right: 5%;
+		margin-left: 5%;
+		text-align: center;
+		border-radius: 30px;
+		border: 1px solid #aaa;
+		color: #000;
+		outline: none;
+	}
 	.composInput{
 		width: 74%;
 		height: 40px;
@@ -71,7 +83,7 @@ header{
 	#avatarDivulgador{
 		border-radius: 50px;
 	}
-	#menuPerfil_popH{
+	.menu_popH{
 		background-color: #fff;
 		width: 92%;
 		height: 45px;
@@ -83,6 +95,20 @@ header{
 		width: 80%;
 		margin-right: 10%;
 		margin-left: 10%;
+		height: 400px;
+	}
+	#grid_1_CadastrarEvento{
+		width: 40%;
+		float: left;
+		margin-left: 10%;
+		margin-right: 0%;
+		height: 400px;
+	}
+	#grid_2_CadastrarEvento{
+		width: 40%;
+		float: left;
+		margin-left: 0%;
+		margin-right: 10%;
 		height: 400px;
 	}
 	#btnSalvar{
@@ -124,9 +150,14 @@ float: right;
 p{
 	text-align: center;
 }
-h3{
+#meuPerifh3{
 	font-size: 39px;
 	margin-right: 79%;
+	float: left;
+}
+#cadasEventoh3{
+	font-size: 39px;
+	margin-right: 66%;
 	float: left;
 }
 select{
