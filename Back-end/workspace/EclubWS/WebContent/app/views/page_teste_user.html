@@ -1,102 +1,98 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-	<title>Eclub</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="../assets/css/page_teste_user.css">
-	<script type="text/javascript" src="../assets/javascript/page_teste_user.js"></script>
-	 <link href="//fonts.googleapis.com/css?family=Lato:400,300,600" rel="stylesheet" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	
-  <body background="../assets/images/_.jpg">
-		<header>
-	            <a href="../views/page_principal_mapa.html" id="eclub_small">
-	            <H1 >Eclub</H1>
-	            </a>
-				<menu>
-	        	<ul class="menu">
-	          	
+  <!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+  	<title>Eclub</title>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" type="text/css" href="../assets/css/page_teste_user.css">
+  	<script type="text/javascript" src="../assets/javascript/page_teste_user.js"></script>
+  	 <link href="//fonts.googleapis.com/css?family=Lato:400,300,600" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  	
+    <body background="../assets/images/_.jpg">
+  		<header>
+  	            <a href="../views/page_principal_mapa.html" id="eclub_small">
+  	            <H1 >Eclub</H1>
+  	            </a>
+  				<menu>
+  	        	<ul class="menu">
+  	          	<li>
+  	            <a href="#">Meu Perfil</a>
+  	            <ul class="submenu-1">
+          		  <li>
+          		<form id="form_perfil_user" action="page_teste_user.js">
+            		<input type="text" id="form_name" placeholder="Nome" autofocus=""></input>
+            		<br>
+            		<input type="number" id="form_number" placeholder="Idade" name="quantity"  min="18" max="80"></input>
+            		<br>
+            		<input type="email" id="form_email" placeholder="Seu email" autofocus=""></input>
+            		<br>
+            		 <input type="radio" id="form_sexo" name="gender" value="Male" checked> Masculino
+    				  <input type="radio" id="form_sexo2" name="gender" value="Female"> Feminino
+    				    <br>
+    				<input type="submit" id="form_salvar" value="Salvar">
+    				</form>
+            		</li>
+            		</ul>
+  	          </li>
               <li>
-	            <a href="#">Meu Perfil</a>
-	            <ul class="submenu-1">
-        		<li>
-        		<form id="form_perfil_user" action="page_teste_user.js">
-          		<input type="text" id="form_name" placeholder="Nome" autofocus=""></input>
-          		<br>
-          		<input type="number" id="form_number" placeholder="Idade" name="quantity"  min="18" max="80"></input>
-          		<br>
-          		<input type="email" id="form_email" placeholder="Seu email" autofocus=""></input>
-          		<br>
-          		 <input type="radio" id="form_sexo" name="gender" value="Male" checked> Masculino
-  				  <input type="radio" id="form_sexo2" name="gender" value="Female"> Feminino
-  				    <br>
-  				<input type="submit" id="form_salvar" value="Salvar">
-  				</form>
-          		</li>
+                <a href="#">Amigos</a>
+                <ul class="submenu-2">
+              <iframe src="../views/amigos_user.html">
+              </iframe>
+              </ul>
+                </li>
+              
+                   <li>
+  	          	    <a href="#">Preferências</a>
+  	               <ul class="submenu-3">
+  	            <form id="form_preferencias_user" action="page_teste_user.js">
+                <fieldset id="fieldset_cidades_favoritas">
+                  <input list="cidades_favoritas" name="cidades favoritas" placeholder="cidades favoritas" id="input_cidades_favoritas">
+    				<datalist id="cidades_favoritas">
+      			<option value="Recife">
+      			<option value="Jaboatao dos Guarapes">
+      			<option value="Cabo de Santo Agostinho">
+       			</option>
+    				</datalist>
+    				<input id="adc_cidades_favoritas" type="text" placeholder="+" autofocus=""></input>
+            </fieldset>
+            <fieldset id="fieldset_estilos_favoritos">         
+             <input list="estilos_musicais" name="lugares favoritos" placeholder="Estilos musicais" id="input_estilos_musicais">
+    				<datalist id="estilos_musicais">
+      			<option value="Forró">
+      			<option value="MPB">
+      			<option value="Rock">
+       			</option>
+    				</datalist>
+    			 <input id="adc_estilos_musicais" type="text" placeholder="+" autofocus=""></input>
+           </fieldset>
+           <fieldset id="fieldset_lugares_favoritos">         
+             <input list="lugares_favoritos" name="lugares favoritos" placeholder="lugares favoritos" id="input_lugares_favoritos">
+            <datalist id="lugares_favoritos">
+            <option value="Bar Puxadinho">
+            <option value="Anexo Pub">
+            <option value="DownTown">
+            </option>
+            </datalist>
+           <input id="adc_lugares_favoritos" type="text" placeholder="+" autofocus=""></input>
+           </fieldset>
+  	            </form>
           		</ul>
-	          </li>
-	          <!--
-	          <li>
-	            <a href="#">Amigos</a>
-	            <ul class="submenu-2">
-        		<iframe src="../views/amigos_user.html">
-        		</iframe>
-        		</ul>
-	            </li>
-              -->
-                 <li>
-	          	<a href="#">Preferências</a>
-	            <ul class="submenu-3">
-	            <form id="form_preferencias_user" action="page_teste_user.js">
-              <fieldset id="fieldset_cidades_favoritas">
-                <input list="cidades_favoritas" name="cidades favoritas" placeholder="cidades favoritas" id="input_cidades_favoritas">
-  				<datalist id="cidades_favoritas">
-    			<option value="Recife">
-    			<option value="Jaboatao dos Guarapes">
-    			<option value="Cabo de Santo Agostinho">
-     			</option>
-  				</datalist>
-          </option>
-  				<input id="adc_cidades_favoritas" type="text" placeholder="+" autofocus=""></input>
-          </fieldset>
-          <fieldset id="fieldset_estilos_favoritos">         
-           <input list="estilos_musicais" name="lugares favoritos" placeholder="Estilos musicais" id="input_estilos_musicais">
-  				<datalist id="estilos_musicais">
-    			<option value="Forró">
-    			<option value="MPB">
-    			<option value="Rock">
-     			</option>
-  				</datalist>
-  			 <input id="adc_estilos_musicais" type="text" placeholder="+" autofocus=""></input>
-         </fieldset>
-         <fieldset id="fieldset_lugares_favoritos">         
-           <input list="lugares_favoritos" name="lugares favoritos" placeholder="lugares favoritos" id="input_lugares_favoritos">
-          <datalist id="lugares_favoritos">
-          <option value="Bar Puxadinho">
-          <option value="Anexo Pub">
-          <option value="DownTown">
-          </option>
-          </datalist>
-         <input id="adc_lugares_favoritos" type="text" placeholder="+" autofocus=""></input>
-         </fieldset>
-	            </form>
-        		</ul>
-	            </li>  
-	          </ul>
-         	</menu>
-        
-
-	       	<!--
-	       	<figure>
-	       	<img src="../assets/images/mulher.jpg">
-	       	<select>
-	       	<option value=""></option>
- 			 <option value="alterar_foto" id="alterar_foto_user">Alterar foto</option>
- 			 <option value="logout" id="logout_user" id="alterar_foto_user">Logout</option>
-			</select>
-			</figure>
-			-->
-		</header>
-	</body>
-</html>
+  	            </li>
+                -->
+              </ul>
+              </menu>
+  	       	<!--
+  	       	<figure>
+  	       	<img src="../assets/images/mulher.jpg">
+  	       	<select>
+  	       	<option value=""></option>
+   			 <option value="alterar_foto" id="alterar_foto_user">Alterar foto</option>
+   			 <option value="logout" id="logout_user" id="alterar_foto_user">Logout</option>
+  			</select>
+  			</figure>
+  			-->
+  		</header>
+  	</body>
+  </html>

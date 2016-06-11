@@ -62,7 +62,7 @@ menu li a{
 }
 ul .submenu-1{
   width: 400%;
-  height: 400%;
+  height: 420%;
   background-color: #C0C0C0;
   opacity: 0.8;
   position: absolute;
@@ -113,15 +113,17 @@ ul.menu ul{
   left:0;
   padding:5px; 
   border-radius:10px 10px 10px 10px; 
+  box-shadow: 3px 3px 3px 3px;
 }
 .menu li:hover > ul.submenu-3{ 
-  width: 350%;
-  height: 300%;
+  width: 200%;
+  height: 710%;
   display:block; 
   top:50px; 
   left:0;
   padding:5px; 
   border-radius:10px 10px 10px 10px; 
+  box-shadow: 3px 3px 3px 3px;
 }
 
 #form_perfil_user{
@@ -134,7 +136,12 @@ ul.menu ul{
 	height: inherit;
 	display: table-footer-group;
 }
-
+fieldset{
+	width: 300px;
+	height: 80px;
+	margin: 10px 10px 10px 10px;
+	border-color: transparent;
+}
 input{
 	width: 250px;
 	height: 25px;
@@ -143,37 +150,45 @@ input{
 	text-align: center;
 }
 #input_cidades_favoritas, #adc_cidades_favoritas{
-	width: 170px;
+	width: 250px;
 	height: 25px;
 	border-radius: 5px 5px 5px 5px;
+	margin: 10px 10px 5px 22px;
+	outline: none;
+	text-align: center;
+}
+#fieldset_estilos_favoritos{
+	width: 300px;
+	height: 80px;
+	margin: 10px 10px 10px 10px;
+	border-color: transparent;
+}
+
+#input_estilos_musicais, #adc_estilos_musicais{
+	width: 250px;
+	height: 25px;
+	border-radius: 5px 5px 5px 5px;
+	margin: 10px 10px 5px 21px;
 	outline: none;
 	text-align: center;
 }
 
-#input_estilos_musicais,#adc_estilos_musicais{
-	width: 170px;
+#fieldset_lugares_favoritos{
+	width: 300px;
+	height: 80px;
+	margin: 10px 10px 10px 10px;
+	border-color: transparent;
+}
+ 
+ #input_lugares_favoritos, #adc_lugares_favoritos{
+	width: 250px;
 	height: 25px;
 	border-radius: 5px 5px 5px 5px;
-	margin:-2px 66px 4px 0px;
+	margin: 10px 10px 5px 21px;
 	outline: none;
 	text-align: center;
 }
-#input_lugares_favoritos{
-	width: 170px;
-	height: 25px;
-	border-radius: 5px 5px 5px 5px;
-	margin:-3px 0px 2px 70px;
-	outline: none;
-	text-align: center;	
-}
- #adc_lugares_favoritos{
-	width: 170px;
-	height: 25px;
-	border-radius: 5px 5px 5px 5px;
-	margin:0px 0px 0px 70px;
-	outline: none;
-	text-align: center;	
- }
+
 #form_name{
 	margin: 5% 5% 5% 10%;
 }
@@ -197,26 +212,6 @@ width:  100px;
 margin: 15px 5px 5px 100px;
 }
 
-fieldset{
-	width: 100px;
-	height: 100px;
-	border-color: transparent;
-}
-
-#fieldset_lugares_favoritos{
-	height: 100px;
-	margin: -104px 28px 0px 0px;
-	float: right;
-	border-color: transparent;
-}
-
-#fieldset_estilos_favoritos{
-
-	height: 100px;
-	margin: -104px 145px 0px 0px;
-	float: right;
-	border-color: transparent;
-}
 
 /*Configurações de cores
 .menu li:hover > a{ 
