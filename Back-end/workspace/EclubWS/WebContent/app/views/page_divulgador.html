@@ -39,7 +39,7 @@
 							<input type="text" name="Nome" id="camposNome" class="composInput" placeholder="Nome" autofocus="">
 							<input type="text" name="Email" id="camposEmail" class="composInput" placeholder="Email">
 							<input type="text" name="Telefone" id="camposTele" class="composInput" placeholder="Telefone">
-							<button type="button" onclick="mostra('perfil_pop');" id="btnSalvar">Salvar</button>
+							<button type="button" onclick="mostra('perfil_pop');" id="btnSalvarMeuPerfil" class="btnSalvar">Salvar</button>
 						</section>
 					</div>
 					<!--pop up do cadastro de eventos-->
@@ -57,10 +57,11 @@
 							<input type="text" name="emailDivulgador" id="emailDivulgador" class="composInputCadastrarEvento" placeholder="Email do Divulgador">
 							<input type="text" name="telefone" id="telefoneDivulgador" class="composInputCadastrarEvento" placeholder="Telefone do Divulgador">
 
-							<button type="button" onclick="mostra('cadastrarEventos_pop');" id="btnSalvar">Salvar</button>
+							<button type="button" onclick="mostra('cadastrarEventos_pop');" id="btnSalvarEvento" class="btnSalvar">Salvar</button>
 						</section>
 						<section id="grid_2_CadastrarEvento">
-							<input type="text" name="descricaoEvento" id="descricaoEvento" class="composInputCadastrarEvento" placeholder="Descrição do Evento">
+
+							<textarea rows="10" cols="1"  maxlength="500" id="descricaoEvento" class="composInputCadastrarEvento" placeholder="Descrição do Evento"></textarea>
 						</section>
 					</div>
 
@@ -75,13 +76,13 @@
 					<img class="widget" id="CadastrarEventos" onclick="mostra('cadastrarEventos_pop');" src="../assets/images/salvar.png">
 				</li>
 				<li>
-					<img class="widget" id="gerenciarEventos" src="#">
+					<img class="widget" id="gerenciarEventos" src="../assets/images/">
 				</li>
 				<li>
-					<img class="widget" id="VisualizarEventos" src="#">
+					<img class="widget" id="VisualizarEventos" src="../assets/images/configuracoes.png">
 				</li>
 				<li>
-					<img class="widget" id="historicoEventos" src="#">
+					<img class="widget" id="historicoEventos" src="../assets/images/historicoEventos.png">
 				</li>
 			</ul>			
 		</nav>

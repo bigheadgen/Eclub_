@@ -40,6 +40,9 @@ header{
 		z-index: 0;
 		display: inline;
 	}
+	#descricaoEvento{
+		height: 230px;
+	}
 	.composInputCadastrarEvento{
 		width: 90%;
 		height: 20px;
@@ -111,12 +114,17 @@ header{
 		margin-right: 10%;
 		height: 400px;
 	}
-	#btnSalvar{
+	.btnSalvar{
 		width: 20%;
 		height: 35px;
 		border-radius: 30px;
 		text-align: center;
 		margin-top: 4%;
+	}
+	#btnSalvarEvento{
+		width: 50%;
+		margin-left: 5%;
+    	margin-top: 15%;
 	}
 	.btnFechar{
 		position: absolute;
