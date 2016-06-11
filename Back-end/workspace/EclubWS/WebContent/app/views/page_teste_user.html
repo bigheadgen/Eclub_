@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../assets/css/page_teste_user.css">
-	<script type="text/javascript" src="../assets/javascript/page_user.js"></script>
+	<script type="text/javascript" src="../assets/javascript/page_teste_user.js"></script>
 	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<body background="../assets/images/balada_.jpg">
@@ -15,7 +15,8 @@
 	            </a>
 				<menu>
 	        	<ul class="menu">
-	          	<li>
+	          	
+              <li>
 	            <a href="#">Meu Perfil</a>
 	            <ul class="submenu-1">
         		<li>
@@ -34,6 +35,7 @@
           		</li>
           		</ul>
 	          </li>
+	          
 	          <li>
 	            <a href="#">Amigos</a>
 	            <ul class="submenu-2">
@@ -41,22 +43,52 @@
         		</iframe>
         		</ul>
 	            </li>
+	            
                  <li>
 	          	<a href="#">Preferências</a>
 	            <ul class="submenu-3">
 	            <form id="form_preferencias_user" action="page_teste_user.css">
+              <fieldset>
                 <input list="cidades_favoritas" name="cidades favoritas" placeholder="cidades favoritas">
   				<datalist id="cidades_favoritas">
     			<option value="Recife">
-    			<option value="Jaboatao">
-    			<option value="Cabo">
+    			<option value="Jaboatao dos Guarapes">
+    			<option value="Cabo de Santo Agostinho">
      			</option>
   				</datalist>
+          </option>
+  				<input id="adc_cidades_favoritas" type="text" placeholder="+" autofocus=""></input>
+          </fieldset>
+  				<fieldset id="fieldset_lugares_favoritos">
+  				 <input list="lugares_favoritos" name="lugares favoritos" placeholder="Lugares favoritos">
+  				<datalist id="lugares_favoritos">
+    			<option value="Bar Puxadinho">
+    			<option value="Anexo Pub">
+    			<option value="DownTown">
+     			</option>
+  				</datalist>
+          <input id="adc_lugares_favoritos" type="text" placeholder="+" autofocus=""></input>
+
+          </fieldset>
+          <fieldset id="fieldset_estilos_favoritos">         
+           <input list="estilos_musicais" name="lugares favoritos" placeholder="Estilos musicais">
+  				<datalist id="estilos_musicais">
+    			<option value="Forró">
+    			<option value="MPB">
+    			<option value="Rock">
+     			</option>
+  				</datalist>
+  			 <input id="adc_estilos_musicais" type="text" placeholder="+" autofocus=""></input>
+         </fieldset>
+         <input type="submit" id="form_salvar" value="Salvar">
 	            </form>
         		</ul>
 	            </li>  
-	          </ul>  
+	          </ul>
+            
 	       	</menu>
+        
+
 	       	<!--
 	       	<figure>
 	       	<img src="../assets/images/mulher.jpg">

@@ -89,6 +89,7 @@ ul .submenu-3{
   border-radius: 10px 10px 10px 10px;
   border-color: black;
 }
+
 ul.menu ul{ 
  display:none; 
 }
@@ -128,6 +129,12 @@ ul.menu ul{
 	height: inherit;
 	display: table-footer-group;
 }
+#form_contas_associadas{
+	width: inherit;
+	height: inherit;
+	display: table-footer-group;
+}
+
 input{
 	width: 250px;
 	height: 25px;
@@ -158,10 +165,25 @@ width:  100px;
 margin: 15px 5px 5px 100px;
 }
 
+fieldset{
+	width: 100px;
+	height: 100px;
+	border-color: transparent;
+}
 
+#fieldset_lugares_favoritos{
+	height: 100px;
+	margin: -102px 40px 0px 0px;
+	float: right;
+	border-color: transparent;
+}
 
-
-
+#fieldset_estilos_favoritos{
+	height: 100px;
+	margin: -104px 115px 0px 0px;
+	float: right;
+	border-color: transparent;
+}
 
 /*Configurações de cores
 .menu li:hover > a{ 
