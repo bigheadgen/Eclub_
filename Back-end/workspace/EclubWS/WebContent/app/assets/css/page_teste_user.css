@@ -115,8 +115,8 @@ ul.menu ul{
   border-radius:10px 10px 10px 10px; 
 }
 .menu li:hover > ul.submenu-3{ 
-  width: 400%;
-  height: 500%;
+  width: 350%;
+  height: 300%;
   display:block; 
   top:50px; 
   left:0;
@@ -142,6 +142,38 @@ input{
 	outline: none;
 	text-align: center;
 }
+#input_cidades_favoritas, #adc_cidades_favoritas{
+	width: 170px;
+	height: 25px;
+	border-radius: 5px 5px 5px 5px;
+	outline: none;
+	text-align: center;
+}
+
+#input_estilos_musicais,#adc_estilos_musicais{
+	width: 170px;
+	height: 25px;
+	border-radius: 5px 5px 5px 5px;
+	margin:-2px 66px 4px 0px;
+	outline: none;
+	text-align: center;
+}
+#input_lugares_favoritos{
+	width: 170px;
+	height: 25px;
+	border-radius: 5px 5px 5px 5px;
+	margin:-3px 0px 2px 70px;
+	outline: none;
+	text-align: center;	
+}
+ #adc_lugares_favoritos{
+	width: 170px;
+	height: 25px;
+	border-radius: 5px 5px 5px 5px;
+	margin:0px 0px 0px 70px;
+	outline: none;
+	text-align: center;	
+ }
 #form_name{
 	margin: 5% 5% 5% 10%;
 }
@@ -173,14 +205,15 @@ fieldset{
 
 #fieldset_lugares_favoritos{
 	height: 100px;
-	margin: -102px 40px 0px 0px;
+	margin: -104px 28px 0px 0px;
 	float: right;
 	border-color: transparent;
 }
 
 #fieldset_estilos_favoritos{
+
 	height: 100px;
-	margin: -104px 115px 0px 0px;
+	margin: -104px 145px 0px 0px;
 	float: right;
 	border-color: transparent;
 }
