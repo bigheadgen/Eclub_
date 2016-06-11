@@ -8,11 +8,11 @@
 		height: auto;
 		margin-bottom: 1%;
 		background-color: rgba(0, 0, 0, 0.61);
-		min-height:10%;
+		min-height:11%;
 		}
 	div #login{
 		width: 160px;
-		height: 35px;
+		height: 40px;
 		max-width: 20%;
 		position: absolute;
 		left: 80%;

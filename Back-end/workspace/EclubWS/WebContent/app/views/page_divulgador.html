@@ -11,7 +11,7 @@
 	<body background="../assets/images/balada_.jpg">
 		<header>
 			<menu id="menu_usuario">
-	        <ul>
+	        <ul id="inHeader">
 	        	<li id="eclub_small">
 	            <a href="../views/homepage.html">
 	            <H1>Eclub</H1>
@@ -28,11 +28,18 @@
 			</select>
 			</figure>
 		</header>
-		
 		<nav id="widgets">
 			<ul>
 					<div id="perfil_pop" class="hidden">
-					<button type="button" class="btnFechar" onclick="mostra('perfil_pop');">X</button>
+					<header id="menuPerfil_popH">
+						<h3>Meu Perfil</h3>
+						<button type="button" class="btnFechar" onclick="mostra('perfil_pop');">X</button></header>
+						<section id="grid_1">
+							<input type="text" name="Nome" id="camposNome" class="composInput" placeholder="Nome" autofocus="">
+							<input type="text" name="Email" id="camposEmail" class="composInput" placeholder="Email">
+							<input type="text" name="Telefone" id="camposTele" class="composInput" placeholder="Telefone">
+							<button type="button" onclick="mostra('perfil_pop');" id="btnSalvar">Salvar</button>
+						</section>
 				</div>
 				<div id="agendaEventos_pop" class="hidden">
 					<button type="button" class="btnFechar" onclick="mostra('agendaEventos_pop');">X</button>

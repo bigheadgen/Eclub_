@@ -34,12 +34,21 @@ function addMarker(location, map) {
   var infowindow = new google.maps.InfoWindow({
     content: contentString
   });
-
-  var marker = new google.maps.Marker({
+  if(location.iconEvento == ""){
+    var marker = new google.maps.Marker({
     position: myLatlng,
     animation: google.maps.Animation.DROP,
     title: location.descricao
-});
+  });
+  }else{
+    var image  = location.iconEvento;
+    var marker = new google.maps.Marker({
+    position: myLatlng,
+    icon: image,
+    animation: google.maps.Animation.DROP,
+    title: location.descricao
+  });
+  }
   marker.addListener('click', function() {
     infowindow.open(map, marker);
   });
@@ -96,90 +105,103 @@ var ev1 ={
   nom: "Boteco",
   descricao: "Nosso evento de teste1",
   lat: -8.065735,
-  long: -34.8728405
+  long: -34.8728405,
+  iconEvento: ""
 };
 var ev2 ={
   cidade:"recife",
   nom: "DownTown Pub",
   descricao: "Nosso evento de teste2",
   lat: -8.0640424,
-  long: -34.8725146
+  long: -34.8725146,
+  iconEvento: ""
 };
 var ev3 ={
   cidade:"recife",
   nom: "Rouge Club",
   descricao: "Nosso evento de teste3",
   lat: -8.0644187,
-  long: -34.8843229
+  long: -34.8843229,
+  iconEvento: ""
 };
 var ev4 ={
   cidade:"recife",
   nom: "Profana Pub",
   descricao: "Nosso evento de teste4",
   lat: -8.0642381,
-  long: -34.8726629
+  long: -34.8726629,
+  iconEvento: ""
 };
 var ev5 ={
   cidade:"jaboatao",
   nom: "O Puxadinho",
   descricao: "Nosso evento de teste5",
   lat: -8.1628837,
-  long: -34.9168949
+  long: -34.9168949,
+  iconEvento: "../assets/images/cerva.png"
 };
 var ev6 ={
   cidade:"jaboatao",
   nom: "ZEN Comida Japonesa",
   descricao: "Nosso evento de teste6",
   lat: -8.1603233,
-  long: -34.9141522
+  long: -34.9141522,
+  iconEvento: ""
 };
 var ev7 ={
   cidade:"jaboatao",
   nom: "Restaurante e Pizzaria Atlântico",
   descricao: "Nosso evento de teste7",
   lat: -8.1608764,
-  long: -34.9137035
+  long: -34.9137035,
+  iconEvento: ""
 };
 var ev8 ={
   cidade:"jaboatao",
   nom: "O Jabá",
   descricao: "Nosso evento de teste8",
   lat: -8.1623286,
-  long: -34.9133276
+  long: -34.9133276,
+  iconEvento: ""
 };
 var ev9 ={
   cidade:"jaboatao",
   nom: "MPBar",
   descricao: "Nosso evento de teste9",
   lat: -8.1628523,
-  long: -34.9128659
+  long: -34.9128659,
+  iconEvento: ""
 };
 var ev10 ={
   cidade:"jaboatao",
   nom: "Connect Club",
   descricao: "Nosso evento de teste10",
   lat: -8.2155692,
-  long: -34.930016
+  long: -34.930016,
+  iconEvento: ""
 };
 var ev11 ={
   cidade:"jaboatao",
   nom: "Anexo Pub",
   descricao: "Nosso evento de teste11",
   lat: -8.1794505,
-  long: -34.917899
+  long: -34.917899,
+  iconEvento: ""
 };
 var ev12 ={
   cidade:"jaboatao",
   nom: "Big House",
   descricao: "Nosso evento de teste12",
   lat: -8.1884023,
-  long: -34.9194243
+  long: -34.9194243,
+  iconEvento: ""
 };
 var ev13 ={
   cidade:"recife",
   nom: "Chevrolet Hall",
   descricao: "Nosso evento de teste13",
   lat: -8.0342658,
-  long: -34.8712582
+  long: -34.8712582,
+  iconEvento: ""
 };
 var eventos = new Array(ev1, ev2, ev3, ev4, ev5, ev6, ev7, ev8, ev9, ev10, ev11, ev12, ev13);
