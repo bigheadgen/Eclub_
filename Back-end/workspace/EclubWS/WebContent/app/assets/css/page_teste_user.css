@@ -79,7 +79,9 @@ ul .submenu-2{
   border-radius: 10px 10px 10px 10px;
   border-color: black;
 }
-
+iframe{
+border-color: transparent;	
+}
 ul .submenu-3{
   width: 400%;
   height: 400%;
@@ -89,7 +91,15 @@ ul .submenu-3{
   border-radius: 10px 10px 10px 10px;
   border-color: black;
 }
-
+ul .submenu-4{
+  width: 400%;
+  height: 400%;
+  background-color: #C0C0C0;
+  opacity: 0.8;
+  position: absolute;
+  border-radius: 10px 10px 10px 10px;
+  border-color: black;
+}
 ul.menu ul{ 
  display:none; 
 }
@@ -106,7 +116,7 @@ ul.menu ul{
   box-shadow: 3px 3px 3px 3px; 
 }
 .menu li:hover > ul.submenu-2{ 
-  width: 186%;
+  width: 190%;
   height: 600%;
   display:block; 
   top:50px; 
@@ -125,7 +135,16 @@ ul.menu ul{
   border-radius:10px 10px 10px 10px; 
   box-shadow: 3px 3px 3px 3px;
 }
-
+.menu li:hover > ul.submenu-4{ 
+  width: 150%;
+  height: 500%;
+  display:block; 
+  top:50px; 
+  left:0;
+  padding:5px; 
+  border-radius:10px 10px 10px 10px; 
+  box-shadow: 3px 3px 3px 3px;
+}
 #form_perfil_user{
 	width: inherit;
 	height: inherit;
@@ -139,7 +158,7 @@ ul.menu ul{
 fieldset{
 	width: 300px;
 	height: 80px;
-	margin: 10px 10px 10px 10px;
+	margin: 0px 10px 10px 10px;
 	border-color: transparent;
 }
 input{
@@ -148,6 +167,16 @@ input{
 	border-radius: 5px 5px 5px 5px;
 	outline: none;
 	text-align: center;
+}
+#add_redes_sociais{
+	width: 40%;
+	height: 35px;
+	float: right;
+	margin: 6px -40px 0px 0px;
+	border-radius: 30px 30px 30px 30px;
+	outline: none;
+	text-align: center;
+
 }
 #input_cidades_favoritas, #adc_cidades_favoritas{
 	width: 250px;
@@ -211,56 +240,18 @@ display: inline;
 width:  100px;
 margin: 15px 5px 5px 100px;
 }
-
-
-/*Configurações de cores
-.menu li:hover > a{ 
-background:;  
-color:;
+#form_salvar2{
+width:  100px;
+margin: 15px 5px 5px 100px;
 }
-/*Configuração do menu hover*/
-/*nivel 2*
-.submenu-1 a{
-  color:#fff;
-}
-.submenu-1 li:hover > a{ 
-  background:#666;
-}
-
- #menu_usuario{
-		width: 75%;
-		height: 40px;
-		padding-top: 5px;
-		margin-left: 5%;
-		margin-right: 0%;
-		}
-	li{
-		width: 75px;
-		height: 75px;
-		display: inline;
-		margin-right: 4%;
-	}
-
-	#menu_usuario  li a {
-		width: 70px; 
-		height: 70px;
-		margin-right:13px;
-		text-decoration: none;
-		text-align: center;
-		font-family: 'Raleway', sans-serif;
-		font-style: italic;
-		font-size: 18px;
-		color:aliceblue;
-	}
 figure{
 width: 60px;
 height: 50px;
-margin-top: -3%;
+margin-top: -2%;
 margin-right: 11%;
 display: inline-flex;
 float: right;
 }
-
 select{
 	width: 24px;
 	height: 30px;
@@ -271,7 +262,7 @@ select{
 	border-color: transparent;
 	color: aliceblue;
 }	
-#alterar_foto_user, #logout_user{
+#alterar_foto_user, #logout_user,#apagar_conta_user,#privacidade_user{
 background-color: transparent;
 color: black;
 text-align: center;
@@ -279,5 +270,3 @@ font-family: 'Raleway', sans-serif;
 font-style: italic;
 font-size: 14px;
 }
-
-*/
