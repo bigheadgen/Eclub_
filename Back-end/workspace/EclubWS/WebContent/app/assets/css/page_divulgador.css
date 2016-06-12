@@ -13,9 +13,12 @@ header{
 		width: 90%;
 		margin-right: 5%;
 		margin-left: 5%;
-		margin-top: 4%;
+		margin-top: 7%;
 		height: 500px;
 		z-index: 0;
+	}
+	.widget{
+		margin-top: 5%;
 	}
 	#inHeader{
 		width: 90%;
@@ -37,7 +40,7 @@ header{
 		margin-right: 5.166666%;
 		margin-left: 5.166666%;
 		height: 111px;
-		z-index: 0;
+		margin-bottom: 68px;
 		display: inline;
 	}
 	#descricaoEvento{

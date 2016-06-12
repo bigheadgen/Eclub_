@@ -7,3 +7,6 @@ function mostra(id){
 		document.getElementById(id).style.display = 'block';
 	}
 }
+function goMap(){
+	window.location = 'page_principal_mapa.html';
+}
