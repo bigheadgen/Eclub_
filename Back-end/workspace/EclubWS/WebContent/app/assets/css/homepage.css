@@ -105,9 +105,9 @@
 
 		 #links_redes_sociais{
 			width: 100%;
-			margin-left: 29%;
-			margin-right: 29%;
-			margin-top: 2%;
+			margin-left: 27%;
+			margin-right: 27%;
+			margin-top: 3%;
 			}
 		#links_redes_sociais li, img{
 			width: 75px;
@@ -177,6 +177,9 @@
 		}
 
 		@media screen and (min-width: 600px) and (max-width: 700px) {
+			div #divulgadores{
+				left: 78%;
+			}
 		#busca_div{
 			text-align: center;
 			font-size: 1em;
