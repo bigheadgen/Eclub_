@@ -16,8 +16,7 @@ var emailsValidos = ["hotmal.com" , "outlook.com", "gmail.com"];
 		if ((usuario.length >=1) && (dominio.length >=3) && (usuario.search("@")==-1) && (dominio.search("@")==-1) &&
     	    (usuario.search(" ")==-1) && (dominio.search(" ")==-1) && (dominio.search(".")!=-1) &&   
     	    (dominio.indexOf(".") >=1)&& (dominio.lastIndexOf(".") < dominio.length - 1)) {
-
-				alert("E-mail valido");
+				return true;
 			}
 
 	else{ 
@@ -25,8 +24,35 @@ var emailsValidos = ["hotmal.com" , "outlook.com", "gmail.com"];
 	}
 
 }
-
-function validarSenha(){
-		
+function getDivulgador(email){
+	for (var i = 0; i < divulgadores.length; i++) {
+		if(email.localeCompare(divulgadores[i].email)){
+			return divulgadores[i];
+		}
+	}
+	return false;
+}
+function logarDivulgador(){
+	var email = document.getElementById("boxEmail").value.toLowerCase();
+	var senha = document.getElementById("boxSenha").value.toLowerCase();
+	var userDivul = getDivulgador(email);
+	if(validarEmail() == true && userDivul != false && userDivul.senha == senha){
+			alert("entrou");
+			window.location = 'page_divulgador.html?nome=' + userDivul.nome;
+	}else{
+		alert("Senha invalida");
+	}
 
 }
+
+var divulgador1 ={
+	nome: "teste1",
+	emailDivul: "teste1@gmail.com",
+	senha: "0000"
+};
+var divulgador2 ={
+	nome: "teste2",
+	emailDivul: "teste2@hotmail.com",
+	senha: "1234"
+};
+var divulgadores = new  Array(divulgador1, divulgador2);
