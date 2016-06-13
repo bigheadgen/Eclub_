@@ -111,10 +111,10 @@ var ev1 ={
 var ev2 ={
   cidade:"recife",
   nom: "DownTown Pub",
-  descricao: "Nosso evento de teste2",
+  descricao: "Shows de vários estilos de rock para curtir com os amigos e paquerar, diversas cervejas e clima intimista.",
   lat: -8.0640424,
   long: -34.8725146,
-  iconEvento: ""
+  iconEvento: "../assets/images/joW.png"
 };
 var ev3 ={
   cidade:"recife",
@@ -143,10 +143,10 @@ var ev5 ={
 var ev6 ={
   cidade:"jaboatao",
   nom: "ZEN Comida Japonesa",
-  descricao: "Nosso evento de teste6",
+  descricao: "ZEN Comida Japonesa",
   lat: -8.1603233,
   long: -34.9141522,
-  iconEvento: ""
+  iconEvento: "../assets/images/sushi.png"
 };
 var ev7 ={
   cidade:"jaboatao",
@@ -154,7 +154,7 @@ var ev7 ={
   descricao: "Nosso evento de teste7",
   lat: -8.1608764,
   long: -34.9137035,
-  iconEvento: ""
+  iconEvento: "../assets/images/pizzariaA.png"
 };
 var ev8 ={
   cidade:"jaboatao",
