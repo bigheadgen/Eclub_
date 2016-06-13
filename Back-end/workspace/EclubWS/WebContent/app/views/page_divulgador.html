@@ -7,6 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../assets/css/page_divulgador.css">
 	<script type="text/javascript" src="../assets/javascript/page_divulgador.js"></script>
+	<script src="https://apis.google.com/js/client.js?onload=checkAuth">
+    </script>
+
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<body background="../assets/images/balada_.jpg">
 		<header>
@@ -64,7 +67,15 @@
 							<textarea rows="10" cols="1"  maxlength="500" id="descricaoEvento" class="composInputCadastrarEvento" placeholder="Descrição do Evento"></textarea>
 						</section>
 					</div>
+					<!--Agenda Para os Eventos-->
+					<div id="agendaEventos_pop"  class="hidden">
+						<header class="menu_popH">
+						<h3 id="agendaEventosh3">Agenda de Eventos</h3>
+						<button type="button" class="btnFechar" onclick="mostra('agendaEventos_pop');">X</button></header>
+							<div id="my-calendar"></div>
+							
 
+					</div>
 				<!--lista com as imagens-->
 				<li>
 					<img class="widget" id="meuPerfil" onclick="mostra('perfil_pop');" src="../assets/images/divulgadorPerfil.png">
@@ -73,16 +84,16 @@
 					<img class="widget" id="agendaEventos" onclick="mostra('agendaEventos_pop');" src="../assets/images/agendaEventos.png">
 				</li>
 				<li>
-					<img class="widget" id="CadastrarEventos" onclick="mostra('cadastrarEventos_pop');" src="../assets/images/salvar.png">
+					<img class="widget" id="CadastrarEventos" onclick="mostra('cadastrarEventos_pop');" src="../assets/images/map.png">
 				</li>
 				<li>
-					<img class="widget" onclick="goMap();" id="gerenciarEventos" src="../assets/images/map.png">
+					<img class="widget" onclick="goMap();" id="gerenciarEventos" src="../assets/images/lupa3.png">
 				</li>
 				<li>
 					<img class="widget" id="VisualizarEventos" src="../assets/images/configuracoes.png">
 				</li>
 				<li>
-					<img class="widget" id="historicoEventos" src="../assets/images/historicoEventos.png">
+					<img class="widget" id="historicoEventos"  onclick="mostra('cadastrarEventos_pop');" src="../assets/images/historicoEventos.png">
 				</li>
 			</ul>			
 		</nav>

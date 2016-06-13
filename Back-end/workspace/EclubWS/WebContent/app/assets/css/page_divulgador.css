@@ -158,8 +158,20 @@ margin-right: 11%;
 display: inline-flex;
 float: right;
 }
+.ui-datepicker {
+    width: 43em;
+    padding: .2em .2em 0;
+}
 p{
 	text-align: center;
+}
+#my-calendar{
+	width: 90%;
+	height: 380px;
+	margin-top: 10px;
+	margin-right: 5%;
+	margin-left: 5%;
+
 }
 #meuPerifh3{
 	font-size: 39px;
@@ -169,6 +181,11 @@ p{
 #cadasEventoh3{
 	font-size: 39px;
 	margin-right: 66%;
+	float: left;
+}
+#agendaEventosh3{
+	font-size: 39px;
+	margin-right: 63%;
 	float: left;
 }
 select{
