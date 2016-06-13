@@ -1,0 +1,163 @@
+*{
+	margin: 0;
+	padding: 0;
+	height:100%;
+}
+
+header{
+		width: 100%;
+		height: auto;
+		background-color: rgba(0, 33, 77, 1);
+		min-height:11%;
+		}
+
+#grid_1{
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: 2%;
+		width: 60%; 
+		height:auto; 
+	}
+
+#eclub{
+	text-decoration: none;
+	color: black;
+}
+h1,h3{
+		text-align: center;
+		font-family: 'Lato', sans-serif;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 30px;
+		color:#002147;
+	}	
+h1{
+		color:white;
+		font-family: 'Lato', sans-serif;
+		font-weight: 500;
+		font-size: 110px;
+		color:#002147;
+
+	}
+hgroup{
+	width: 100%;
+	height: 50%;
+	margin-top: 1%;
+}
+
+#grid_2{
+	width: 70%;
+	height: 60%;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 1%;
+	margin-bottom: 7%;
+	background-color: #C0C0C0;
+	border-radius: 15px;
+	opacity: 0.8;
+}
+
+h2{
+	height: 12%;
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	font-style: normal;
+	color: #000000;
+}
+
+ul{
+	list-style-type: none;
+	text-align: right;
+	margin-left: 13%;
+	margin-right: 13%;
+	margin-top: 3%;
+}
+li{
+	height: 33%;
+}
+a{
+	color: #000;
+}
+#grid_3{
+	position: relative;
+	top: 10%;
+	width: 70%;
+	height: 80%;
+	margin-top: 5%;
+	margin-right: 15%;
+	margin-left: 15%;
+}
+
+hr{
+	height: 0%;
+	width: 80%;
+	margin-left:10%;
+	margin-right:10%;
+	color:black;
+}
+
+ #linha_inferior{
+	width: 110%;
+	margin-top: 18%;
+	margin-left:-5%;
+	margin-right:-5%;
+	background-color: white;
+	
+}
+.box_input{
+	width: 100%;
+	height: 38%;
+}
+#boxEmail ,#boxSenha{
+	width: 74%;
+	height: 33%;
+	margin-top: 4%;
+	margin-left: 13%;
+	margin-right: 13%;
+	text-align: center;
+	border-radius: 10px;
+	border: 1px solid #000;
+	outline: none;
+}
+#enviar_ajuda{
+	width: 30%;
+	height: 10%;
+	margin-left: 35%;
+	margin-right: 35%;
+	border-radius: 20px;
+	border: 1px solid #000;
+	outline: none;
+}
+
+nav#esq_senha_novo_cadast{
+	width: 100%;
+	height: 20%;
+
+}
+
+h1,h2,h3,p{
+	text-align: center;
+}
+
+footer{
+			width: 100%;
+			height: auto;
+			min-height: 2%;
+			margin-top: 1%;
+		}
+
+	cite{
+		margin-left: 46%;
+		color: white;
+		font-size: 22px;
+		font-family: 'Lato', sans-serif;
+	}
+
+	@media screen and (min-width: 600px) and (max-width: 700px) {	
+		cite{
+		margin-left: 38%;
+		color: white;
+		font-size: 20px;
+		font-family: 'Lato', sans-serif;
+	}
+}

@@ -1,0 +1,209 @@
+*{
+	margin: 0;
+	padding: 0;
+	height:100%;
+}
+header{
+		width: 100%;
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.61);
+		min-height:10%;
+		}
+	nav{
+		width: 90%;
+		margin-right: 5%;
+		margin-left: 5%;
+		margin-top: 7%;
+		height: 500px;
+		z-index: 0;
+	}
+	.widget{
+		margin-top: 5%;
+	}
+	#inHeader{
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		height: 50px;
+		z-index: 0;
+	}
+	ul{
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		height: 500px;
+		z-index: 0;
+	}
+	li{
+		float: left;
+		width: 23%;
+		margin-right: 5.166666%;
+		margin-left: 5.166666%;
+		height: 111px;
+		margin-bottom: 68px;
+		display: inline;
+	}
+	#descricaoEvento{
+		height: 230px;
+	}
+	.composInputCadastrarEvento{
+		width: 90%;
+		height: 20px;
+		margin-top: 2%;
+		margin-right: 5%;
+		margin-left: 5%;
+		text-align: center;
+		border-radius: 30px;
+		border: 1px solid #aaa;
+		color: #000;
+		outline: none;
+	}
+	.composInput{
+		width: 74%;
+		height: 40px;
+		margin-top: 4%;
+		margin-right: 13%;
+		text-align: center;
+		border-radius: 30px;
+		border: 1px solid #aaa;
+		color: #000;
+		outline: none;
+	}
+	.hidden{
+		width: 70%;
+		height: 450px;
+		margin-left: 4%;
+		border-radius: 20px;
+		display: none;
+		position: absolute;
+		background-color: #fff;
+		box-shadow: 5px 5px 5px 5px #fbfbfb
+	}
+	 #menu_usuario{
+		width: 75%;
+		height: 40px;
+		padding-top: 5px;
+		margin-left: 5%;
+		margin-right: 0%;
+	}
+	#avatarDivulgador{
+		border-radius: 50px;
+	}
+	.menu_popH{
+		background-color: #fff;
+		width: 92%;
+		height: 45px;
+		margin-left: 4%;
+		margin-right: 4%;
+		border-bottom: solid #000;
+	}
+	#grid_1{
+		width: 80%;
+		margin-right: 10%;
+		margin-left: 10%;
+		height: 400px;
+	}
+	#grid_1_CadastrarEvento{
+		width: 40%;
+		float: left;
+		margin-left: 10%;
+		margin-right: 0%;
+		height: 400px;
+	}
+	#grid_2_CadastrarEvento{
+		width: 40%;
+		float: left;
+		margin-left: 0%;
+		margin-right: 10%;
+		height: 400px;
+	}
+	.btnSalvar{
+		width: 20%;
+		height: 35px;
+		border-radius: 30px;
+		text-align: center;
+		margin-top: 4%;
+	}
+	#btnSalvarEvento{
+		width: 50%;
+		margin-left: 5%;
+    	margin-top: 15%;
+	}
+	.btnFechar{
+		position: absolute;
+		border-radius: 150px;
+		width: 36px;
+		height: 36px;
+	}
+	#menu_usuario  li a {
+		width: 70px;
+		height: 70px;
+		margin-right:13px;
+		text-decoration: none;
+		text-align: center;
+		font-family: 'Raleway', sans-serif;
+		font-style: italic;
+		font-size: 18px;
+		color:aliceblue;
+	}
+h1{
+	display: inline-block;
+	font-size: 40px;
+}
+figure{
+width: 60px;
+height: 50px;
+margin-top: -3%;
+margin-right: 11%;
+display: inline-flex;
+float: right;
+}
+.ui-datepicker {
+    width: 43em;
+    padding: .2em .2em 0;
+}
+p{
+	text-align: center;
+}
+#my-calendar{
+	width: 90%;
+	height: 380px;
+	margin-top: 10px;
+	margin-right: 5%;
+	margin-left: 5%;
+
+}
+#meuPerifh3{
+	font-size: 39px;
+	margin-right: 79%;
+	float: left;
+}
+#cadasEventoh3{
+	font-size: 39px;
+	margin-right: 66%;
+	float: left;
+}
+#agendaEventosh3{
+	font-size: 39px;
+	margin-right: 63%;
+	float: left;
+}
+select{
+	width: 24px;
+	height: 30px;
+	float: right;
+	margin-top: 15%;
+	background-color: transparent;
+	outline: none;
+	border-color: transparent;
+	color: aliceblue;
+}	
+#alterar_foto_user, #logout_user{
+background-color: transparent;
+color: black;
+text-align: center;
+font-family: 'Raleway', sans-serif;
+font-style: italic;
+font-size: 14px;
+}
+

@@ -1,0 +1,160 @@
+	*{
+		margin: 0;
+		padding: 0;
+		height:100%;
+	}
+
+	header{
+		width: 100%;
+		height: auto;
+		background-color: rgba(0, 33, 77, 1);
+		min-height:11%;
+		}
+	div #divulgadores{
+		width: 160px;
+		height: 40px;
+		max-width: 20%;
+		position: absolute;
+		left: 84%;
+		top: 2%;
+		border-radius: 20px;
+		outline: none;
+		background-color: transparent;
+		color: white;
+		font-size: 18px;
+		font-family: 'Lato', sans-serif;
+	}
+	#grid_1{
+		margin-left: 20%;
+		margin-right: 20%;
+		margin-top: 2%;
+		width: 60%; 
+		height:auto;
+	}
+hgroup{
+		width: 100%;
+		height: 50%;
+		margin-top: 1%;
+	}
+	#eclub{
+		text-decoration: none;
+		color: black;
+	}
+h1,h3{
+		text-align: center;
+		font-family: 'Lato', sans-serif;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 30px;
+		color:#002147;	
+	}
+	h1{
+		color:white;
+		font-family: 'Lato', sans-serif;
+		font-weight: 500;
+		font-size: 110px;
+		color:#002147;
+	}
+
+	#grid_2{
+	width: 70%;
+	height: 60%;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 1%;
+	margin-bottom: 7%;
+	background-color: #C0C0C0;
+	border-radius: 15px;
+	opacity: 0.8;
+}
+
+
+	h2{
+	height: 12%;
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	font-style: normal;
+	color: #000000;
+	}
+
+	#grid_3{
+		position: relative;
+		top: 10%;
+		width: 70%;
+		height: 80%;
+		margin-top: 5%;
+		margin-right: 15%;
+		margin-left: 15%;
+
+	}
+
+	hr{
+	height: 0%;
+	width: 80%;
+	margin-left:10%;
+	margin-right:10%;
+	margin-bottom: 2%;
+	color:black;
+}
+
+	#links_redes_sociais{
+			width: 100%;
+			margin-left: 21%;
+			margin-right: 29%;
+			margin-top: 3%;
+			}
+
+		#links_redes_sociais li, img{
+			width: 75px;
+			height: 75px;
+			display: inline;
+		}
+		#links_redes_sociais a {
+			width: 70px;
+			height: 70px;
+			margin-right:15px;
+			text-decoration: none;
+		}
+	#links_redes_sociais a img{
+	background-color: white solid;
+	border-radius: 70px;
+}
+	h1,h2,h3,p{
+		text-align: center;
+	}
+ #linha_inferior{
+	width: 90%;
+	margin-top: 8%;
+	margin-left:5%;
+	margin-right:5%;
+	background-color: white;
+	
+}
+footer{
+			width: 100%;
+			height: auto;
+			min-height: 2%;
+			margin-top: 1%;
+		}
+
+	cite{
+		margin-left: 46%;
+		color: white;
+		font-size: 22px;
+		font-family: 'Lato', sans-serif;
+	}
+
+	@media screen and (min-width: 600px) and (max-width: 700px) {	
+	#links_redes_sociais ul{
+		margin: 0px 0px 0px -89px;
+		width: 114%;
+
+	}
+	cite{
+		margin-left: 38%;
+		color: white;
+		font-size: 20px;
+		font-family: 'Lato', sans-serif;
+	}
+
+		}
