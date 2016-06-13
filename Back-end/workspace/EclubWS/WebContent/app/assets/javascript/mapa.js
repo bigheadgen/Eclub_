@@ -88,9 +88,9 @@ var p1 = {
 };
 var p2 = { 
   name: "jaboatao", 
-  lat: -8.1885582,
-  long:-34.9504721,
-  zoom: 14
+  lat: -8.1677612,
+  long:-34.922719,
+  zoom: 12
 };
 var p3 = { 
   name: "cabo", 
