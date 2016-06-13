@@ -13,9 +13,8 @@ header{
 		width: 90%;
 		margin-right: 5%;
 		margin-left: 5%;
-		margin-top: 7%;
+		margin-top: 5%;
 		height: 500px;
-		z-index: 0;
 	}
 	.widget{
 		margin-top: 5%;
@@ -28,19 +27,19 @@ header{
 		z-index: 0;
 	}
 	ul{
-		width: 90%;
-		margin-left: 5%;
-		margin-right: 5%;
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
 		height: 500px;
-		z-index: 0;
+		float: left;
 	}
 	li{
 		float: left;
-		width: 23%;
-		margin-right: 5.166666%;
-		margin-left: 5.166666%;
+		width: 15%;
+		margin-right: 9.16666%;
+		margin-left: 9.16666%;
 		height: 111px;
-		margin-bottom: 68px;
+		margin-bottom: 130px;
 		display: inline;
 	}
 	#descricaoEvento{
