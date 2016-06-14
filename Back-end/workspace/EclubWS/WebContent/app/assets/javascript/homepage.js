@@ -38,3 +38,21 @@ function myPesquisar(){
 		}
 	}
 }
+function logarRedes(rede){
+  if(rede == 'facebook'){
+     window.open("http://www.facebook.com/", "facebook", "height=400,width=600");
+     window.location = 'page_user.html';
+  }
+  if(rede == 'google'){
+     window.open("https://accounts.google.com/", "Gmail", "height=400,width=600");
+     window.location = 'page_user.html';
+  }
+  if(rede == 'Twitter'){
+     window.open("https://twitter.com/login?lang=pt", "Twitter", "height=400,width=600");
+     window.location = 'page_user.html';
+  }
+  if(rede == 'Instagram'){
+     window.open("https://www.instagram.com/accounts/login/?force_classic_login", "Instagram", "height=400,width=600");
+     window.location = 'page_user.html';
+  }
+}
