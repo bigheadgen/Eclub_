@@ -294,7 +294,7 @@ font-size: 14px;
 			margin-top: 1%;
 			width: 60%; 
 			height:auto; 
-			min-height:20%;
+			min-height:10%;
 		}
 
 		#busca_div{
@@ -331,8 +331,8 @@ font-size: 14px;
 
 #map{
 		width: 100%;
-		height: 533px;
-		margin-top: 1%;
+		height: 590px;
+		margin-top: 0%;
 	}
 	hr {
 		height: 0%;
