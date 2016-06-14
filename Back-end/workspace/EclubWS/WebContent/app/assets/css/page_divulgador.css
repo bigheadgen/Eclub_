@@ -16,6 +16,12 @@ header{
 		margin-top: 5%;
 		height: 500px;
 	}
+	#calendar{
+		width: 80%;
+		height: 390px;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
 	.widget{
 		margin-top: 5%;
 	}

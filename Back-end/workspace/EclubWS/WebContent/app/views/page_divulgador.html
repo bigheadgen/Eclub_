@@ -74,13 +74,45 @@
 						<header class="menu_popH">
 						<h3 id="agendaEventosh3">Agenda de Eventos</h3>
 						<button type="button" class="btnFechar" onclick="mostra('agendaEventos_pop');">X</button></header>
-							<div id="my-calendar"></div>
+							<iframe id="calendar" src="https://calendar.google.com/calendar/embed?height=200&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=pt.brazilian%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FRecife" style="border-width:0" width="400" height="200" frameborder="0" scrolling="no"></iframe>
 					</div>
 				<!--Gerenciar Evento-->
 				<div id="gerenciarEvento_pop" class="hidden">
 						<header class="menu_popH">
 						<h3 id="gerenciarEventosh3">Gerenciar Eventos</h3>
 						<button type="button" class="btnFechar" onclick="mostra('gerenciarEvento_pop');">X</button></header>
+						<section id="eventosAlterar" style="height: 400px; width: 92%; margin-left: 4%; margin-right: 1%;">
+
+							<div id="infoEdtEvento" class="rowEvento" style="height: 80px; ">
+								<h3 style="float: left; left; margin-right: 17%;">ICONE</h3>
+								<h3 style="float: left; margin-right: 17%;">DATA</h3>
+								<h3 style=" margin-left: 80px; float: left; margin-right: 17%;">DESCRIÇÂO</h3>
+							</div>
+							<div class="rowEvento" style="border-bottom: 2px solid #000; height: 80px;">
+								<img style="float: left; width: 50px;" src="../assets/images/cerva.png">
+								<p style="width: 126px; margin-left: 110px; float: left; margin-right: 60px;">17-06-2016</p>
+								 aproxegue, a casa é pequena mas cabe tudin. Pode ir puxando...
+								 <b style="color: rgba(0, 33, 71, 1); margin-left: 60px;"><u><a href="#">Editar</a></u></b>	
+							</div>
+							<div class="rowEvento" style="border-bottom: 2px solid #000; height: 80px;">
+								<img style="float: left;" src="../assets/images/pizzariaA.png">
+								<p style="width: 126px; margin-left: 80px; float: left; margin-right: 73px;">18-06-2016</p>
+								Rede de restaurantes serve carnes, saladas, massas e pizzas
+								<b style="color: rgba(0, 33, 71, 1); margin-left: 73px;"><u><a href="#">Editar</a></u></b>
+							</div>
+							<div class="rowEvento" style=" border-bottom: 2px solid #000; height: 80px;">
+								<img style="float: left;" src="../assets/images/joW.png"> 
+								<p style="width: 126px; margin-left: 80px; float: left; margin-right: 130px;">24-06-2016</p>
+									Shows de vários estilos de rock para curtir...
+									<b style="color: rgba(0, 33, 71, 1); margin-left: 113px;"><u><a href="#">Editar</a></u></b>
+							</div>
+							<div class="rowEvento" style=" height: 80px;">
+								<img style="float: left;" src="../assets/images/sushi.png">
+								<p style="width: 126px; margin-left: 58px; float: left; margin-right: 136px;">01-07-2016</p>
+									Restaurante japonês e bar com aclamados
+									<b style="color: rgba(0, 33, 71, 1); margin-left: 126px;"><u><a href="#">Editar</a></u></b>	
+							</div>					
+						</section>
 				</div>
 				<!--lista com as imagens-->
 				<li>
