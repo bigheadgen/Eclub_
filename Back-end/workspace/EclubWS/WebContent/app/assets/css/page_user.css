@@ -7,7 +7,7 @@
 header{
 		width: 100%;
 		height: auto;
-		background-color: rgba(0, 0, 0, 0.61);
+		background-color: rgba(0, 33, 71, 1);
 		min-height:11%;
 		}
 a#eclub_small{
@@ -21,7 +21,7 @@ a#eclub_small{
 }
 a#eclub_small h1{
 	display: inline-block;
-	font-size: 40px;
+	font-size: 45px;
 	font-family: 'Lato', sans-serif;
 	font-style: italic;
 	}
@@ -108,6 +108,7 @@ ul.menu ul{
 .menu li:hover > ul.submenu-1{ 
   width: 200%;
   height: 600%;
+  z-index:9999;
   display:block; 
   top:50px; 
   left:0;
@@ -118,6 +119,7 @@ ul.menu ul{
 .menu li:hover > ul.submenu-2{ 
   width: 190%;
   height: 600%;
+  z-index:9999;
   display:block; 
   top:50px; 
   left:0;
@@ -128,6 +130,7 @@ ul.menu ul{
 .menu li:hover > ul.submenu-3{ 
   width: 200%;
   height: 710%;
+  z-index:9999;
   display:block; 
   top:50px; 
   left:0;
@@ -138,6 +141,7 @@ ul.menu ul{
 .menu li:hover > ul.submenu-4{ 
   width: 150%;
   height: 500%;
+  z-index:9999;
   display:block; 
   top:50px; 
   left:0;
@@ -242,12 +246,25 @@ margin: 15px 5px 5px 100px;
 }
 #form_salvar2{
 width:  100px;
-margin: 15px 5px 5px 100px;
+margin: 30px 5px 5px 66px;
 }
 figure{
 width: 60px;
 height: 50px;
 margin-top: -2%;
+margin-right: 11%;
+display: inline-flex;
+float: right;
+}
+figure img{
+	border-radius: 10px 10px 10px 10px;
+}
+#figure_contas_associadas{
+width: 200px;
+height: 50px;
+margin-left:-10px; 
+margin-right: 30px;
+margin-top: 2%;
 margin-right: 11%;
 display: inline-flex;
 float: right;
@@ -270,3 +287,72 @@ font-family: 'Raleway', sans-serif;
 font-style: italic;
 font-size: 14px;
 }
+
+#grid_1{
+			margin-left: 20%;
+			margin-right: 20%;
+			margin-top: 1%;
+			width: 60%; 
+			height:auto; 
+			min-height:20%;
+		}
+
+		#busca_div{
+			text-align: center;
+			font-size: 1em;
+			border: 3px solid white;
+			background-color: white;
+			box-shadow: 15px 15px 15px rgb(74,73,73);
+			border-radius: 20px;
+			width: 80%;
+			height: 45px;
+			margin-left: 10%;
+			margin-right: 10%;
+			margin-top: 7%;
+			outline: none;
+		}
+	#busca{
+			width: 70%;
+			height: 43px;
+			border:none;
+			outline: none;
+			font-size: 20px;
+			text-align: center;
+
+		}
+
+
+		input#buscaimage{
+		height: 40px;
+		width: 40px;
+		margin-bottom: -15px;
+		outline: none;
+		}
+
+#map{
+		width: 100%;
+		height: 533px;
+		margin-top: 1%;
+	}
+	hr {
+		height: 0%;
+		width: 90%;
+		margin-left:5%;
+		margin-right:5%;
+		margin-top: 1%;
+		background-color: white solid;
+	}	
+
+	footer{
+		width: 100%;
+		height: 4%;
+		min-height: 2%;
+		margin-top: 0%;
+	}
+
+	cite{
+		margin-left: 46%;
+		color: #000;
+		font-size: 20px;
+		font-family: 'Raleway', sans-serif;
+	}
