@@ -8,8 +8,10 @@
   	<script type="text/javascript" src="../assets/javascript/page_teste_user.js"></script>
   	 <link href="//fonts.googleapis.com/css?family=Lato:400,300,600" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  	
-    <body background="../assets/images/_.jpg">
+    <script type="text/javascript" src="../assets/javascript/mapa.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/javascript/mapa.js"></script>
+  	<body background="../assets/images/_.jpg">
   		<header>
   	            <a href="../views/page_principal_mapa.html" id="eclub_small">
   	            <H1 >Eclub</H1>
@@ -107,9 +109,23 @@
            <option value="Apagar conta" id="apagar_conta_user">Apagar conta</option>
          <option value="Privacidade" id="privacidade_user">Privacidade</option>
    			 <option value="logout" id="logout_user" id="alterar_foto_user">Logout</option>
-
   			</select>
   			</figure>
   		</header>
+      <section id="grid_1">
+        <div id="busca_div" >
+            <input type="search" name="busca" placeholder="Buscar uma Cidade" autocomplete="on" autofocus="" size="20" maxlength="20" id="busca">
+            <input type="image" onclick="myPesquisar()" src="../assets/images/busca.png" id="buscaimage"/>        
+          </div>
+        </section>
+        <section id="map"></section>
+        <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ2unp3pWWtaTLrQrGmozyoTQT82GHM8c&callback=initMap">
+          </script>
+         <hr>
+    <footer>
+        <small>
+        <cite>Eclub &copy 2016 </cite></small>
+      </footer>
   	</body>
   </html>
