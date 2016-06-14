@@ -27,7 +27,9 @@
 	       	<select>
 	       	<option value=""></option>
  			 <option value="alterar_foto" id="alterar_foto_user">Alterar foto</option>
- 			 <option value="logout" id="logout_user" id="alterar_foto_user">Logout</option>
+ 			 <option value="logout" id="logout_user" id="alterar_foto_user">Apagar conta</option>
+ 			 <option value="logout" id="logout_user" id="alterar_foto_user">Privacidade</option>
+ 			  <option value="logout" id="logout_user" id="alterar_foto_user">Logout</option>
 			</select>
 			</figure>
 		</header>
@@ -82,24 +84,28 @@
 				</div>
 				<!--lista com as imagens-->
 				<li>
-					<img class="widget" id="meuPerfil" onclick="mostra('perfil_pop');" src="../assets/images/divulgadorPerfil.png">
+					<img class="widget" id="meuPerfil" title="Meu Perfil" onclick="mostra('perfil_pop');" src="../assets/images/perfil.png">
 				</li>
 				<li>
-					<img class="widget" id="agendaEventos" onclick="mostra('agendaEventos_pop');" src="../assets/images/agendaEventos.png">
+					<img class="widget" id="agendaEventos" title="Agenda de Eventos" onclick="mostra('agendaEventos_pop');" src="../assets/images/Events-Calendar-Icon.png">
 				</li>
 				<li>
-					<img class="widget" id="CadastrarEventos" onclick="mostra('cadastrarEventos_pop');" src="../assets/images/map.png">
+					<img class="widget" title="Cadastrar Evento" id="CadastrarEventos" onclick="mostra('cadastrarEventos_pop');" src="../assets/images/radar.png">
 				</li>
 				<li>
-					<img class="widget" onclick="goMap();" id="gerenciarEventos" src="../assets/images/lupa3.png">
+					<img class="widget" onclick="goMap();" title="Gerenciar Eventos" id="gerenciarEventos" src="../assets/images/Places.png">
 				</li>
 				<li>
-					<img class="widget" id="gerenciarEventos" onclick="mostra('gerenciarEvento_pop');" src="../assets/images/configuracoes.png">
+					<img class="widget" id="VisualizarEventos" title="Visualizar Eventos" onclick="mostra('gerenciarEvento_pop');" src="../assets/images/Keyword-Analysis-Icon.png">
 				</li>
 				<li>
-					<img class="widget" id="historicoEventos"  onclick="mostra('');" src="../assets/images/historicoEventos.png">
+					<img class="widget" id="historicoEventos" title="Historico de Eventos" onclick="mostra('');" src="../assets/images/historicoEventos.png">
 				</li>
 			</ul>			
 		</nav>
+		<hr>
+    	<footer>
+        <small><cite>Eclub &copy 2016 </cite></small>
+      </footer>
 	</body>
 </html>

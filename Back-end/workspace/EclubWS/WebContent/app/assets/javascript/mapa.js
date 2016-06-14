@@ -103,7 +103,7 @@ var locais = new Array(p1, p2, p3);
 var ev1 ={
   cidade:"recife",
   nom: "Boteco",
-  descricao: "Nosso evento de teste1",
+  descricao: "O Bistrô & Boteco Recife Antigo oferece, além do tradicional happy hour da rede, almoço com buffet em um ambiente aconchegante.",
   lat: -8.065735,
   long: -34.8728405,
   iconEvento: ""
@@ -135,7 +135,7 @@ var ev4 ={
 var ev5 ={
   cidade:"jaboatao",
   nom: "O Puxadinho",
-  descricao: "Nosso evento de teste5",
+  descricao: "Se aproxegue, a casa é pequena mas cabe tudin. Pode ir puxando o tamburete meu fio se sente e fique a vontade. Se sinta como se tivesse na sua casa.",
   lat: -8.1628837,
   long: -34.9168949,
   iconEvento: "../assets/images/cerva.png"
@@ -143,7 +143,7 @@ var ev5 ={
 var ev6 ={
   cidade:"jaboatao",
   nom: "ZEN Comida Japonesa",
-  descricao: "ZEN Comida Japonesa",
+  descricao: "Restaurante japonês e bar com aclamados espetinhos de peixe, ambiente moderno com jardim e espelhos d'água.",
   lat: -8.1603233,
   long: -34.9141522,
   iconEvento: "../assets/images/sushi.png"
@@ -151,7 +151,7 @@ var ev6 ={
 var ev7 ={
   cidade:"jaboatao",
   nom: "Restaurante e Pizzaria Atlântico",
-  descricao: "Nosso evento de teste7",
+  descricao: "Rede de restaurantes serve carnes, saladas, massas e pizzas",
   lat: -8.1608764,
   long: -34.9137035,
   iconEvento: "../assets/images/pizzariaA.png"
@@ -159,7 +159,7 @@ var ev7 ={
 var ev8 ={
   cidade:"jaboatao",
   nom: "O Jabá",
-  descricao: "Nosso evento de teste8",
+  descricao: "Comida nordestina e pizzas, além de cervejas e cachaças, em espaço informal com artesanato e música ao vivo.",
   lat: -8.1623286,
   long: -34.9133276,
   iconEvento: ""
@@ -167,7 +167,7 @@ var ev8 ={
 var ev9 ={
   cidade:"jaboatao",
   nom: "MPBar",
-  descricao: "Nosso evento de teste9",
+  descricao: "Bar com menu de carnes e pescados promove shows de bandas de estilos diversos em noites temáticas à beira-mar.",
   lat: -8.1628523,
   long: -34.9128659,
   iconEvento: ""

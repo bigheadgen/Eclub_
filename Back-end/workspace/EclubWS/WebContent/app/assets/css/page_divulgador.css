@@ -6,7 +6,7 @@
 header{
 		width: 100%;
 		height: auto;
-		background-color: rgba(0, 0, 0, 0.61);
+		background-color: rgba(0, 33, 71, 1);
 		min-height:10%;
 		}
 	nav{
@@ -145,9 +145,31 @@ header{
 		font-size: 18px;
 		color:aliceblue;
 	}
+hr {
+		height: 0%;
+		width: 90%;
+		margin-left:5%;
+		margin-right:5%;
+		margin-top: 1%;
+		background-color: white solid;
+	}	
+
+	footer{
+		width: 100%;
+		height: 4%;
+		min-height: 2%;
+		margin-top: 0%;
+	}
+
+	cite{
+		margin-left: 46%;
+		color: #000;
+		font-size: 20px;
+		font-family: 'Raleway', sans-serif;
+	}
 h1{
 	display: inline-block;
-	font-size: 40px;
+	font-size: 45px;
 }
 figure{
 width: 60px;
