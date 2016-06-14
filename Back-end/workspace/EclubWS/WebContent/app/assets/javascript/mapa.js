@@ -82,9 +82,9 @@ function initMap() {
 }
 var p1 = {
   name: "recife",
-  lat: -8.0518067, 
-  long:-34.9101193,
-  zoom: 14
+  lat: -8.0695948, 
+  long:-34.9381602,
+  zoom: 13
 };
 var p2 = { 
   name: "jaboatao", 
@@ -189,12 +189,12 @@ var ev11 ={
   iconEvento: ""
 };
 var ev12 ={
-  cidade:"jaboatao",
-  nom: "Big House",
-  descricao: "Nosso evento de teste12",
-  lat: -8.1884023,
-  long: -34.9194243,
-  iconEvento: ""
+  cidade:"recife",
+  nom: "Escalante's Tex Mex Food",
+  descricao: "Restaurante de cozinha mexicana e texana, com grelhados e especiarias moderadas, ao som de mariachis ao vivo.",
+  lat: -8.1102892,
+  long: -34.8946477,
+  iconEvento: "../assets/images/taco.png"
 };
 var ev13 ={
   cidade:"recife",
