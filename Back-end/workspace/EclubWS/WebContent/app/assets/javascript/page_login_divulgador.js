@@ -32,14 +32,17 @@ function getDivulgador(email){
 	}
 	return false;
 }
+function goPageDivulgador(){
+	window.location = "page_divulgador.html";
+}
 function logarDivulgador(){
+	
 	var email = document.getElementById("boxEmail").value.toLowerCase();
-	var senha = document.getElementById("boxSenha").value.toLowerCase();
+	var senha = document.getElementById("boxSenha").value;
 	var userDivul = getDivulgador(email);
-	if(validarEmail() == true && userDivul != false && userDivul.senha == senha){
-			alert("entrou");
-			window.location='page_divulgador.html';
-
+	
+	if(validarEmail() == true && userDivul != false ){	
+		goPageDivulgador();
 	}else{
 		alert("Senha invalida");
 	}
