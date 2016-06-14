@@ -15,7 +15,7 @@ function validarCidades(valor_busca){
 		
 		if(valor_busca == cidades[i]){
 				
-			window.location = 'page_teste_user.html?local='+valor_busca;
+			window.location = 'page_user.html?local='+valor_busca;
 			return true;
 		}
 	}
