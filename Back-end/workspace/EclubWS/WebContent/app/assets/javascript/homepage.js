@@ -18,7 +18,6 @@ function validarCidades(valor_busca){
 		}
 	}
 	return false;
-
 }
 function myPesquisar(){
 

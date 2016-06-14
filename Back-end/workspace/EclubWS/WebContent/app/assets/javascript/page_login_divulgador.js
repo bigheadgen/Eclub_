@@ -38,16 +38,15 @@ function logarDivulgador(){
 	var userDivul = getDivulgador(email);
 	if(validarEmail() == true && userDivul != false && userDivul.senha == senha){
 			alert("entrou");
-			window.location = 'page_divulgador.html?nome=' + userDivul.nome;
+			window.location='page_divulgador.html';
+
 	}else{
 		alert("Senha invalida");
 	}
-
 }
-
 var divulgador1 ={
-	nome: "teste1",
-	emailDivul: "teste1@gmail.com",
+	nome: "gustavo",
+	emailDivul: "gustavo@gmail.com",
 	senha: "0000"
 };
 var divulgador2 ={

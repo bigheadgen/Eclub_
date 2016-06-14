@@ -7,7 +7,7 @@
 		width: 100%;
 		height: auto;
 		margin-bottom: 1%;
-		background-color: rgba(0, 0, 0, 0.61);
+		background-color:  rgba(0, 33, 71, 1);
 		min-height:11%;
 		}
 	div #login{
@@ -113,7 +113,7 @@
 
 	cite{
 		margin-left: 46%;
-		color: #000;
+		color: rgba(0, 33, 71, 1);
 		font-size: 20px;
 		font-family: 'Raleway', sans-serif;
 	}

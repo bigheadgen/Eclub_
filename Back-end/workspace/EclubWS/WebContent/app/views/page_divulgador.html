@@ -73,9 +73,13 @@
 						<h3 id="agendaEventosh3">Agenda de Eventos</h3>
 						<button type="button" class="btnFechar" onclick="mostra('agendaEventos_pop');">X</button></header>
 							<div id="my-calendar"></div>
-							
-
 					</div>
+				<!--Gerenciar Evento-->
+				<div id="gerenciarEvento_pop" class="hidden">
+						<header class="menu_popH">
+						<h3 id="gerenciarEventosh3">Gerenciar Eventos</h3>
+						<button type="button" class="btnFechar" onclick="mostra('gerenciarEvento_pop');">X</button></header>
+				</div>
 				<!--lista com as imagens-->
 				<li>
 					<img class="widget" id="meuPerfil" onclick="mostra('perfil_pop');" src="../assets/images/divulgadorPerfil.png">
@@ -90,7 +94,7 @@
 					<img class="widget" onclick="goMap();" id="gerenciarEventos" src="../assets/images/lupa3.png">
 				</li>
 				<li>
-					<img class="widget" id="VisualizarEventos" src="../assets/images/configuracoes.png">
+					<img class="widget" id="VisualizarEventos" onclick="mostra('gerenciarEvento_pop');" src="../assets/images/configuracoes.png">
 				</li>
 				<li>
 					<img class="widget" id="historicoEventos"  onclick="mostra('cadastrarEventos_pop');" src="../assets/images/historicoEventos.png">
